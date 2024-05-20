@@ -4,7 +4,7 @@ body {
     text-align: center;
     list-style: none;
     font-family: "Dosis";
-    display: inline-flex; 
+    display: grid; 
     justify-content: center;
     align-items: center;
 }
