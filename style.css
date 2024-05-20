@@ -1,10 +1,12 @@
 body {
-    margin: 5;
+    margin: 0;
     background: #141414;
     text-align: center;
     list-style: none;
     font-family: "Dosis";
-    align-items: center
+    align-items: center;
+    display: flex; 
+    justify-content: center
 }
 
 ul {
