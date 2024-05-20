@@ -11,21 +11,21 @@ ul {
 }
     
 h1 {
-color: black;
+color: white;
 font-size: 30px;
 font-weight: 700;  
 line-height: 2;
 }
 
 h2 {
-color: black;
+color: white;
 font-size: 25px;
 font-weight: 700;
 line-height: 1.8;
 }
 
 h3 {
-color: black;
+color: white;
 font-size: 23px;
 font-weight: 700;
 list-style: none;
@@ -33,7 +33,7 @@ line-height: 2.3;
 }
 
 p {
-color: black;
+color: white;
 margin-right: 60px;
 margin-left: 60px;
 font-size: 20px;
