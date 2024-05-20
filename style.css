@@ -4,8 +4,11 @@ body {
     text-align: center;
     list-style: none;
     font-family: "Dosis";
-    justify-content: center;
-    align-items: center;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
 }
 
 ul {
