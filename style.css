@@ -4,6 +4,9 @@ body {
     text-align: center;
     list-style: none;
     font-family: "Dosis";
+    display: block; 
+    justify-content: center;
+    align-items: center;
 }
 
 .centered-block {
