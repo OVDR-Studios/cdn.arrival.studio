@@ -22,6 +22,8 @@
 
         tooltipTargets.forEach(target => {
             target.addEventListener('mousemove', function (e) {
+                const tooltipText = target.getAttribute('data-tooltip'); // Get tooltip text from data attribute
+                tooltip.textContent = tooltipText; // Set the tooltip text
                 tooltip.style.display = 'block'; // Show the tooltip
                 tooltip.style.left = e.pageX + 15 + 'px'; // Position tooltip to the right of the cursor
                 tooltip.style.top = e.pageY + 15 + 'px'; // Position tooltip below the cursor
@@ -54,7 +56,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap" rel="stylesheet">
     </head>
     <body>
-      <h1 id="latestVersion" class="tooltip-target">Pre-Release 04</h1>
+      <h1 id="latestVersion" data-tooltip="This is tooltip text for text!">Pre-Release 04</h1>
       <div class="tooltip">The latest version of FNAF: MW</div></p>
 
       <h1 id="latestVersion" class="tooltip-target">TEst</h1>
