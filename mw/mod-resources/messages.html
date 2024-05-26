@@ -1,4 +1,37 @@
-<!DOCTYPE html>
+
+<style>
+.tooltip-target {
+    color: white;
+}
+
+.tooltip {
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    display: none; /* Start with the tooltip hidden */
+}
+</style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tooltipTargets = document.querySelectorAll('.tooltip-target');
+        const tooltip = document.querySelector('.tooltip');
+
+        tooltipTargets.forEach(target => {
+            target.addEventListener('mousemove', function (e) {
+                tooltip.style.display = 'block'; // Show the tooltip
+                tooltip.style.left = e.pageX + 15 + 'px'; // Position tooltip to the right of the cursor
+                tooltip.style.top = e.pageY + 15 + 'px'; // Position tooltip below the cursor
+            });
+
+            target.addEventListener('mouseout', function () {
+                tooltip.style.display = 'none'; // Hide the tooltip when not hovering
+            });
+        });
+    });
+    </script>
 <html>
     <head>
         <title>MW Dynamic Text</title>
@@ -20,55 +53,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap" rel="stylesheet">
     </head>
     <body>
-      <h1 id="latestVersion">Pre-Release 04</h1>
+      <h1 id="latestVersion" class="tooltip-target">Pre-Release 04</h1>
+      <div class="tooltip">The latest version of FNAF: MW</div></p>
     </body>
 </html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<style>
-.tooltip-target {
-    text-decoration: underline;
-    color: blue;
-    cursor: pointer;
-}
-
-.tooltip {
-    position: absolute;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    display: none; /* Start with the tooltip hidden */
-}
-</style>
-</head>
-<body>
-    <p>Hover over this <span class="tooltip-target">text</span> to see the tooltip.
-    <div class="tooltip">This is the tooltip content!</div></p>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const tooltipTargets = document.querySelectorAll('.tooltip-target');
-        const tooltip = document.querySelector('.tooltip');
-
-        tooltipTargets.forEach(target => {
-            target.addEventListener('mousemove', function (e) {
-                tooltip.style.display = 'block'; // Show the tooltip
-                tooltip.style.left = e.pageX + 15 + 'px'; // Position tooltip to the right of the cursor
-                tooltip.style.top = e.pageY + 15 + 'px'; // Position tooltip below the cursor
-            });
-
-            target.addEventListener('mouseout', function () {
-                tooltip.style.display = 'none'; // Hide the tooltip when not hovering
-            });
-        });
-    });
-    </script>
-</body>
-</html>
-
