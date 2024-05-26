@@ -48,22 +48,24 @@
 </style>
 </head>
 <body>
-    <p>Hover over this <span id="tooltipTarget" class="tooltip-target">text</span> to see the tooltip.</p>
-    <div id="tooltip" class="tooltip">This is the tooltip content!</div>
+    <p>Hover over this <span class="tooltip-target">text</span> to see the tooltip.
+    <div class="tooltip">This is the tooltip content!</div></p>
 
     <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const tooltipTarget = document.getElementById('tooltipTarget');
-        const tooltip = document.getElementById('tooltip');
+        const tooltipTargets = document.querySelectorAll('.tooltip-target');
+        const tooltip = document.querySelector('.tooltip');
 
-        tooltipTarget.addEventListener('mousemove', function (e) {
-            tooltip.style.display = 'block'; // Show the tooltip
-            tooltip.style.left = e.pageX + 15 + 'px'; // Position tooltip to the right of the cursor
-            tooltip.style.top = e.pageY + 15 + 'px'; // Position tooltip below the cursor
-        });
+        tooltipTargets.forEach(target => {
+            target.addEventListener('mousemove', function (e) {
+                tooltip.style.display = 'block'; // Show the tooltip
+                tooltip.style.left = e.pageX + 15 + 'px'; // Position tooltip to the right of the cursor
+                tooltip.style.top = e.pageY + 15 + 'px'; // Position tooltip below the cursor
+            });
 
-        tooltipTarget.addEventListener('mouseout', function () {
-            tooltip.style.display = 'none'; // Hide the tooltip when not hovering
+            target.addEventListener('mouseout', function () {
+                tooltip.style.display = 'none'; // Hide the tooltip when not hovering
+            });
         });
     });
     </script>
