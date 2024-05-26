@@ -17,21 +17,22 @@
 }
     
 </style>
-   <script>
+    <script>
     document.addEventListener('DOMContentLoaded', function () {
         const tooltipTargets = document.querySelectorAll('.tooltip-target');
         const tooltip = document.querySelector('.tooltip');
 
         tooltipTargets.forEach(target => {
             target.addEventListener('mouseover', function (e) {
-                const tooltipText = target.getAttribute('data-tooltip'); // Get tooltip text from data attribute
-                tooltip.textContent = tooltipText; // Set the tooltip text
+                tooltip.textContent = target.getAttribute('data-tooltip'); // Set the tooltip text
                 tooltip.style.display = 'block'; // Show the tooltip
+                tooltip.style.left = e.pageX + 15 + 'px'; // Position tooltip to the right of the cursor
+                tooltip.style.top = e.pageY + 15 + 'px'; // Position tooltip below the cursor
             });
 
             target.addEventListener('mousemove', function (e) {
-                tooltip.style.left = e.pageX + 15 + 'px'; // Position tooltip to the right of the cursor
-                tooltip.style.top = e.pageY + 15 + 'px'; // Position tooltip below the cursor
+                tooltip.style.left = e.pageX + 15 + 'px'; // Update position to the right of the cursor
+                tooltip.style.top = e.pageY + 15 + 'px'; // Update position below the cursor
             });
 
             target.addEventListener('mouseout', function () {
