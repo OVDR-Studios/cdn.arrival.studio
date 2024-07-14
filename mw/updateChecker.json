@@ -1,10 +1,11 @@
 {
   "homepage": "https://fnafmw.com/downloads",
   "1.20.1": {
+    "1.2.2": "Thanks for 1K Discord members! Read more: changelogs.fnafmw.com/versions/beta/1.2.3"
     "1.2.2": "Fixes vent system bug that causes animatronics to dupe. Recommended you download! (fnafmw.com/downloads)"
   },
   "promos": {
-    "1.20.1-latest": "1.2.2",
-    "1.20.1-recommended": "1.2.2"
+    "1.20.1-latest": "1.2.3",
+    "1.20.1-recommended": "1.2.3"
   }
 }
