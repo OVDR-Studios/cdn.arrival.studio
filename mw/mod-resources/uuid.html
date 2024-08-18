@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Minecraft UUID / Username Converter</title>
+        <link rel="canonical" href="https://mcuuid.net">
+        <meta name="description" content="Minecraft UUID and username lookup. Resolve, convert and view name history of any username/UUID today.">
+        <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+        <link href="https://analytics.nodecraft.com" rel="preconnect" crossorigin>
+        <meta name="apple-mobile-web-app-title" content="MCUUID">
+        <meta name="application-name" content="MCUUID">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#1E2B31">
+        <script defer="defer" src="https://mcuuid.net/assets/js/vendor.91bafef5cc374d9fa154.js"></script>
+        <link href="https://mcuuid.net/assets/css/vendor.9ff4fa9b1665b3dff549.css" rel="stylesheet">
+    </head>
+    <body class="javascriptDisabled bg-gray-900 font-opensans">
+        <header class="p-5">
+            <div class="md:container md:mx-auto">
+                <div class="flex">
+                    <div class="flex-grow">
+                        <a href="/" class="inline-block focus:outline-white">
+                            <svg viewBox="0 0 145 30" xml:space="preserve" class="fill-current w-36 h-auto" area-labelledby="logoAlt">
+                                <title id="logoAlt">MC UUID</title>
+                                <g class="text-green-500">
+                                    <path d="M9.3,0.1v3.7H13v3.4h1.4V3.7h3.7V0.1h9.1V30h-9.1V17.3h-1.6v3.3h-5.8v-3.3H9.3V30H0V0.1H9.3z"/>
+                                    <path d="M30.2,26.3V3.7h3.6V0.1H54V8H39.7v14.1H54V30H33.8v-3.7H30.2z"/>
+                                </g>
+                                <g class="text-blue-500">
+                                    <path d="M56.5,26.3V0h9.3v21.9h5.1V0h9.3v26.3h-3.6v3.7H60.1v-3.7H56.5z"/>
+                                    <path d="M83,26.3V0h9.3v21.9h5.1V0h9.3v26.3h-3.6v3.7H86.6v-3.7H83z"/>
+                                    <path d="M118.7,0.1V30h-9.2V0.1H118.7z"/>
+                                    <path d="M142.3,0.1v2.7h2.7v24.5h-2.7V30h-20.6V0.1H142.3z M131.4,22h3.9V8.1h-3.9V22z"/>
+                                </g>
+                            </svg>
+                        </a>
+                        <h1 class="text-sm text-gray-100 hidden sm:block">The easiest way to lookup, convert, and resolve Minecraft Usernames and UUIDs!</h1>
+                    </div>
+                    <div class="flex-none text-right flex items-center">
+                        <a href="https://nodecraft.com/r/mcuuid" target="_blank" rel="noopener" class="focus:outline-white">
+                            <img src="/assets/images/nodecraft/powered.svg" alt="Powered by Nodecraft" loading="lazy" class="w-32 sm:w-46 md:w-52 h-auto">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <form action="/" id="lookup" class="bg-gray-600 text-gray-100 p-5">
+            <div class="md:container md:mx-auto">
+                <label for="search" class="block uppercase tracking-wider text-center sm:text-left">
+                    Lookup a <span class="inline sm:hidden">Minecraft User</span>
+                    <span class="hidden sm:inline">player by either a Minecraft username or UUID</span>
+                    :
+                </label>
+                <div class="input-group input-group-lg whitespace-nowrap py-4 sm:flex">
+                    <input name="q" placeholder="Enter username or UUID..." value id="search" class="block w-full sm:w-auto bg-white border-none px-5 py-3 flex-grow m-auto sm:m-0 rounded sm:rounded-none sm:rounded-l text-black placeholder-gray-500 focusable" autofocus>
+                    <button class="block w-full sm:w-auto mt-2 mx-auto sm:m-0 bg-blue-600 hover:bg-blue-500 focus:bg-blue-800 rounded sm:rounded-none sm:rounded-r text-white text-lg px-5 py-3 focusable" type="submit">Lookup</button>
+                </div>
+            </div>
+        </form>
+        <main class="bg-gray-500 bg-pixel bg-repeat">
+            <div class="p-5">
+                <div class="md:container md:mx-auto">
+                    <div class="bg-blue-100 text-blue-800 rounded border-0 border-blue-800 px-5 py-3" role="alert">Results will appear here after using the form above...</div>
+                </div>
+            </div>
+        </main>
+        <footer class="p-5">
+            <div class="md:container md:mx-auto md:flex">
+                <div class="w-full sm:w-half">
+                    <strong class="text-lg text-gray-300 mb-1">Useful Resources</strong>
+                    <ul class="ml-8 leading-8 list-disc text-gray-400">
+                        <li>
+                            <a class="link p-1 inline-block" target="_blank" href="https://nodecraft.com/r/mcuuid" rel="noopener">Minecraft Server Hosting</a>
+                        </li>
+                        <li>
+                            <a class="link p-1 inline-block" target="_blank" href="https://mcversions.net" rel="noopener">Minecraft Versions</a>
+                        </li>
+                        <li>
+                            <a class="link p-1 inline-block" target="_blank" href="https://www.atlauncher.com/" rel="noopener">ATLauncher</a>
+                        </li>
+                        <li>
+                            <a class="link p-1 inline-block" target="_blank" href="https://reforged.gg" rel="noopener">Pixelmon</a>
+                        </li>
+                        <li>
+                            <a class="link p-1 inline-block" target="_blank" href="https://steamid.net" rel="noopener">Steam ID Lookup</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full sm:w-half">
+                    <div class="text-gray-300 text-sm">
+                        <strong class="text-lg">What is this website for?</strong>
+                        <p class="mb-2">MCUUID is a project designed to make finding, converting, and looking up Minecraft player UUIDs and usernames, simple and easy. A UUID is a unique identifier issued by Mojang to all users when they purchase the game. This tool is useful when, for example, locating player.dat files on a Minecraft server.</p>
+                        <p class="mb-2">
+                            A big thank you to <a class="link" target="_blank" rel="noopener" href="https://crafthead.net">Crafthead</a>
+                            for providing player avatars.
+                        </p>
+                        <p class="mb-2">
+                            For API usage, please do not scrape this site as it may change at any time. We ask that you use the service we provide at <a class="link" target="_blank" rel="noopener" href="https://playerdb.co">PlayerDB.co</a>
+                            instead.
+                        </p>
+                    </div>
+                    <div class="text-gray-400 text-sm">
+                        <strong class="text-lg">Legal Bits</strong>
+                        <p>Nodecraft Inc and this website are not affiliated with Mojang AB.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script defer="defer" data-domain="mcuuid.net" src="https://analytics.nodecraft.com/js/script.js"></script>
+        <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8b4f73388a5969a9","version":"2024.7.0","r":1,"token":"703232a677704659bb87d183cdb1c8f3","serverTiming":{"name":{"cfL4":true}}}' crossorigin="anonymous"></script>
+    </body>
+</html>
