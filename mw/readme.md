@@ -1,6 +1,8 @@
 # Management Wanted
 
-Used to store assets for [music.fnafmod.com](https://music.fnafmod.com), [fnafmod.com](https://fnafmod.com), and [various other mod resources.](/mw/mod-resources)
+Used to store web-hosted assets for Management Wanted! Allowing us to change splash texts, OVDR Studios Members, and Forge's Update Checker without an update!
 
-![Logo](https://teasers.ovdrstudios.com/assets/images/archive/47291910.jpg?v=5ea03b97)
+Made & Maintained by ChrisArrived.
+
+![Logo](https://fnafmw.com/share.png)
 
