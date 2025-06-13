@@ -5,5 +5,5 @@ Allowing us to change splash texts, OVDR Studios Members, and Forge's Update Che
 
 Made & Maintained by ChrisArrived.
 
-![Logo](https://fnafmw.com/share.png)
+![Logo](https://fnafmw.com/assets/share.png)
 
