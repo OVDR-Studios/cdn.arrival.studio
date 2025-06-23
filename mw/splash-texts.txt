@@ -22,6 +22,7 @@ balls
 Beware the Yellow Hare
 SUBSCRIBE to ChrisArrived!!
 SUBSCRIBE to OVDR!!
+SUBSCRIBE to EpicFr!!
 UNSUBSCRIBE to EdmunnTB!!
 COOKING!
 Also check out Minecraft!
@@ -308,3 +309,4 @@ Hello, {PLAYER} !!
 Really? Playing Minecraft at {TIME_12}?
 Playing MW in the big {YEAR}?
 I miss {YEAR} {-10}
+Drunken Rage
