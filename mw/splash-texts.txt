@@ -1,5 +1,313 @@
-FUCK OVDR
-DOWN WITH THE STUDIO!
-DIE
-THEY DONT PAY ME
-CHRISARRIVED.COM
+# Management Wanted Splash Texts - Updated: 6/22/25
+# {PLAYER} - Player's username
+# {PLAYER_UUID} - Player's UUID
+# {DATE}, {DATE_EU}, {DATE_ISO} - Various date formats
+# {TIME}, {TIME_12}, {TIME_SHORT} - Various time formats
+# {DAY}, {MONTH}, {YEAR} - Date components
+# {DAY_NAME}, {MONTH_NAME} - Text names
+# {SEASON}, {TIME_OF_DAY} - Contextual info
+# {JAVA_VERSION}, {OS}, {MC_VERSION}, {FORGE_VERSION} - System info
+# {MOD_COUNT}, {FPS} - Game info
+# {MEMORY_USED}, {MEMORY_MAX}, {MEMORY_FREE}, {MEMORY_PERCENT} - Memory info
+# {RANDOM_NUMBER}, {RANDOM_COLOR} - Random values
+An OVDR Studios Original
+ovdrstudios.com
+Don't ask about Pig Patch.
+fnafmw.com
+Now in beta!
+Try our LC Mod!
+Try our Tattletail Mod!
+Now supporting Asexual Adam!
+balls
+Beware the Yellow Hare
+SUBSCRIBE to ChrisArrived!!
+SUBSCRIBE to OVDR!!
+SUBSCRIBE to EpicFr!!
+UNSUBSCRIBE to EdmunnTB!!
+COOKING!
+Also check out Minecraft!
+it would be so awesome...
+it would be so cool...
+SIDEKICKS ARE LAME!
+R.O.B.I.N. is the NAME!
+CRACK AN EGG ON IT!
+Paulblart Approved
+Enter the Flipside.
+Back to JRs!
+Gears are Bloody!
+There are no bears.
+Bonnie wont tell you that!
+raging alcoholic
+Finally Updated!
+Fostering a bad workplace environment
+Down with the Studio!
+i hate my boss
+i hate this mod
+i love this mod
+nah i'd win
+Featuring Eddy's Ballpits!
+Hell Nah yo ass tweaking Freddy!
+Hell yea Fazbear you the goat!!
+Jumbo Josh brah
+animdude was here (real)
+EdmunnTB was here..
+ChrisArrived was here..
+hashtag trustinthebag
+collect my freaky pages..
+was that the BITE of 87?
+Super Senior Gojo
+Satoru Gojo could do it..
+bro communication...
+boss ABUSES his POOR employees
+ovdr dungeon
+I LOVE SATURDAY!!
+Domain Expansion
+Satoru Gojo > this mod
+My Timeline is SHATTERED!
+This franchise is fractured!
+This Spawnpoint is Interactive!
+ROBLOX
+IT'S FREE!!
+Let's go golfing!
+GATORADE
+Asparagus
+JDBRYANT can toot.
+Removed Herobrine
+Added Duncan Dolphin
+Spikes Ahoy!
+This management is wanted.
+your help is TRULY wanted.
+management_wanted:funny_block
+I feel the ginger luv!
+It's Strawberry-Blonde!
+More like a Salmon-tinge!
+less buggier than SB!
+our ship is wrecked in 64 pieces!
+Check out Shipwrecked 64!
+Check out Blood & Gears!
+Check out Playtime with Percy!
+Check out Forsaken AR!
+less buggier then RUIN!
+THE MIMIC
+I miss you, Matthew.
+GAME THEORY!
+Helpy Approved
+my sweet prince....
+The name is Eddy..
+What's it tuah?
+OH SUGAH!
+8bits... Ryan
+Into the Pit!
+Scott Cawthorn
+Thank you MW LEAKER!
+Praying on OVDR's downfall!
+Despicable.
+The High Council must decide your fate.
+Malevolent Shrine..
+Unlimited Void..
+Self-Embodiment of Perfection..
+Idol Death Gamble..
+Yuji Itadori..
+Talk no Jutsu..
+Thank you BallinCat43!
+I copyrighted the AP Bio answers.
+Sukuna WHY!
+hollow purple 
+air this fella out!
+I JUST BOUGHT THIS HOSPITAL
+AND IM BLOWING IT UP!
+Someone call JOHN PORK!
+184.177.84.120
+555-236-4002
+!freaky
+They get quirky at night
+Bucky Beaver solos
+fortnite reload anyone?
+hop on fort
+1.19.2 is never happening..
+builderman solos
+THE fnaf mod!
+discord.gg/ovdr
+listen to our music!
+plethora of digital chronicles!
+Special Thanks: OVDR's Math Teacher
+I like that!
+My time? Borrowed!
+MR. BOOZE!
+I've seen every movie ever.
+hop on val
+Rip Salem's Netherite
+Nobody jumps for fazcake in FNAF Civilization..
+ablengers, assemble!
+Your Management is no longer Wanted
+Your Text Here! :)
+Phantron Approved
+FNAF FUNNIES WAZ HERE
+FNAFing on my MW
+FNaF World Deluxe Coming 2045
+i miss matpat.
+Proudly Serving Familes since 1979! 
+Assistance requested!
+30 minutes or your Faz-Coins back, guaranteed!
+CANCELLED DUE TO LEAKS
+wait is this actually getting added?
+Are you ready for Freddy?
+Are you ready for Eddy?
+Yargh, me hawk likes ya, so I'll tuah ya a favor!
+Now with 50% more spookiness!
+Now with less Chica's Magic Rainbow
+Hello Everybody, my name is Markiplier!
+is this where you wanna be?..
+Click the Soos, dude
+Technoblade Never Dies!
+Animatronics Sold Seperately..
+Where blocks and pixels come to life!
+Bloogy!
+Tomorrow is another day!
+Face got punched by Bonnie, day ruined.
+is this thing on?
+More blockier than ever!
+OWWW MY CUBES!
+Don't poop on floor.
+Connection Terminated..
+But that's just a theory...
+The bears are extinct, Fredrick.
+The animatronics DO tend to get a little quirky at night…
+49% safe!
+Father I'm playing minecraft
+A true Fazbear's Fright!
+Worthy of three OH DAMN!!s
+You owe Freddy 15 dollars.
+Please Deposit 5 Coins.
+I always come back!
+Mine-Tuah, Craft on that thang!
+If Freddy, then only Fazbear!!
+*Rattles your endoskeleton*
+Together… we are FNaF!
+Friends Never Abandon Friends!
+Exotic Butters
+don't forget Susan...
+don't forget Zachariah..
+Is the management still wanted?
+I’m placing blocks ‘n crap ‘cause I’m in frickin’ Minecraft
+fnaf is love, fnaf is life.
+The mobs get a bit quirky at night
+Sorry this isn't terraria
+DanTDM > Lunchly
+I always respawn!
+Minecraft: build anything, be anything!
+This is like if FNAF had a Minecraft mod
+HOW DID MATPAT GET IN THE PIZZERIA
+Nothing happened in 87.
+Eeyikes! We gotta stay here for Five Nights!?
+I am still here.
+50% more spooky!
+Let me out.
+Jared I'm still here.
+Nik get me out.
+Tyler I beg, release me.
+Is this what you wanna play?
+Nothing was proven in the court of law!
+Steve? Don't you mean Mr. Raglan?
+NO FNIA you're not getting in.
+FNaF World Deluxe Coming 2045
+Free Punjabi no Virus
+management_wanted:bloogy
+We bring the BOOM!
+don't say "big win!" three times in chat.
+SMOR is here.
+Blame RBLX Forsaken
+AYO CHILL!!
+SMOR > THIS MOD
+Big Dylan
+Big Dylan Scary
+I know a Scary Bear
+I got my Favorite Shoes on
+freddy fazbear
+burp the baby.
+BEDROCK????
+BEDROCK WHEN??
+PLEASE OVDR WHENS BEDROCK???
+BEDROCK PORT PLLSSS???!?!?!
+FREEZE!
+IVE PLAYED THESE MODS BEFORE!
+DONT MOVE!
+This is SO unprofessional...
+You're not very smart!
+Now Featuring: Lazy Ass Larry
+Larry's known to be nonchalant and chill...
+We did it Freddy, we won.... 
+Let's go get some pizza....
+Let’s go play time with Percy...
+Olly Olly Oxen Free!
+ovdr.org
+MW Update is tomorrow!
+Taph isn't bad.
+John Shedletsky
+C00lkidd was here
+C00LGUI wont work here
+Winslow... the cat...
+The Order of the Stone!
+Greetings... Adventurers.
+I ... am the White Pumpkin.
+I ... am the Hollow Hare.
+Try to Keep Up!
+Live and Learn
+HATSUNE MIKU?!?
+Duditude's Back Ya'll
+Your Luck is about to Run Out.
+MUSIC MAN !!!
+Lewis Dawkins played this mod.
+FusionZGamer played this mod!
+Ash GTLive played this mod!
+CuppaTeaEXE Played this mod!
+Have you gone to the bathroom?
+Yes Fusion, we'll add Goth Girls.
+Dawko played this mod!
+A GAME THEORY!
+Matpat for President
+SirPancakes was here
+Zeus was here
+What's up Overdrivers
+What's up Clockworkers
+OVDR was here
+Check out Secure Craft Protect!
+I Found out the Secret of the Mimic
+Does Doom Run on it
+Heartbreak Wilted Flower
+Nightmare Chungus Entity
+Do not name Freddy "INVINCIBLE"
+Subscribe to ZeusIGN
+Rebel was here
+Check out Surveillance Package!
+Check out Cannibal Conundrum!
+:3
+:D
+:)
+:(
+</3
+<3
+The Moon Haunts You!
+AGAIN!
+ARMED AND DANGEROUS!
+PURE CHAOS!
+MAXIMUM PULSE!
+Like the Naʼvi...
+Jarvis, crease his Jordans.
+Jarvis, clip that.
+Machine, I will cut you down.
+JUDGEMENT
+And thy punishment, is DEATH
+V2 is a fraud
+London or Death
+This Prison.. to hold me?
+Im your best PAL :)
+Removed Herobrine
+You can vent in this game 
+Hello, {PLAYER} !!
+Really? Playing Minecraft at {TIME_12}?
+Playing MW in the big {YEAR}?
+I miss {YEAR} {-10}
+Drunken Rage
+uncle eddy sends his regards
+Rebel was here
