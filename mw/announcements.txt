@@ -8,9 +8,9 @@ CONDITION: {MOD_VERSION} = 1.4
 Welcome to Management Wanted v1.4!
 Check out the new features and improvements in this update at https://changelogs.fnafmw.com
 
-CONDITION: {MONTH} = 12
-Happy Holidays from the OVDR Studios team!
-Thank you for playing Management Wanted this year.
+# CONDITION: {MONTH} = 12
+# Happy Holidays from the OVDR Studios team!
+# Thank you for playing Management Wanted this year.
 
 # CONDITION: {TIME_OF_DAY} = Evening
 # Good evening, {PLAYER}!
