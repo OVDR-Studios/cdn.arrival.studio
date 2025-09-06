@@ -12,9 +12,9 @@ CONDITION: {MONTH} = 12
 Happy Holidays from the OVDR Studios team!
 Thank you for playing Management Wanted this year.
 
-CONDITION: {TIME_OF_DAY} = Evening
-Good evening, {PLAYER}!
-Don't forget to take breaks while playing.
+# CONDITION: {TIME_OF_DAY} = Evening
+# Good evening, {PLAYER}!
+# Don't forget to take breaks while playing.
 
 # Announcement without condition (always shows even with other announcements)
 Check out our Discord at discord.gg/ovdr for updates and community discussion!
