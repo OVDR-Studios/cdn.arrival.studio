@@ -2,6 +2,7 @@
 # Lines starting with # are comments and will be ignored
 # Use CONDITION: to specify when announcements should show
 # Available variables: {MOD_VERSION}, {PLAYER}, {DATE}, {TIME}, etc.
+# MOD VERSION is determined in CustomMainMenuScreen.java so if I forget to change it then oops -Chris
 
 CONDITION: {MOD_VERSION} = 1.4
 Welcome to Management Wanted v1.4!
