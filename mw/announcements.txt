@@ -17,4 +17,4 @@ Check out the new features and improvements in this update at https://changelogs
 # Don't forget to take breaks while playing.
 
 # Announcement without condition (always shows even with other announcements)
-Check out our Discord at discord.gg/ovdr for updates and community discussion!
+Check out our Discord at https://discord.gg/ovdr for updates and community discussion!
