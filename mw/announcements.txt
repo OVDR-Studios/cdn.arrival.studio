@@ -8,8 +8,8 @@
 # HEADER: Custom Developer Message
 # SHOW_HEADER: true
 
-CONDITION: {MOD_VERSION} = 1.4
-ChrisArrived is Stinky
+#CONDITION: {MOD_VERSION} = 1.4
+
 
 # CONDITION: {MONTH} = 12 (doesnt work rn)
 # Happy Holidays from the OVDR Studios team!
