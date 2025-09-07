@@ -7,7 +7,7 @@
 CONDITION: {MOD_VERSION} = 1.4
 Welcome to Management Wanted v1.4! Check out the changelog at: https://changelogs.fnafmw.com
 
-# CONDITION: {MONTH} = 12
+# CONDITION: {MONTH} = 12 (doesnt work rn)
 # Happy Holidays from the OVDR Studios team!
 # Thank you for playing Management Wanted this year.
 
