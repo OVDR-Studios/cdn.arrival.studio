@@ -9,8 +9,7 @@
 # SHOW_HEADER: true
 
 CONDITION: {MOD_VERSION} = 1.4
-Welcome to update 1.4 !!
-Check out the changelog at: https://changelogs.fnafmw.com
+ChrisArrived is Stinky
 
 # CONDITION: {MONTH} = 12 (doesnt work rn)
 # Happy Holidays from the OVDR Studios team!
