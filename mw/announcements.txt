@@ -4,8 +4,13 @@
 # Available variables: {MOD_VERSION}, {PLAYER}, {DATE}, {TIME}, etc.
 # MOD VERSION is determined in CustomMainMenuScreen.java so if I forget to change it then oops -Chris
 
+#CUSTOM HEADER STUFF:
+# HEADER: Custom Developer Message
+# SHOW_HEADER: true
+
 CONDITION: {MOD_VERSION} = 1.4
-Welcome to Management Wanted v1.4! Check out the changelog at: https://changelogs.fnafmw.com
+Welcome to Management Wanted v1.4!
+Check out the changelog at: https://changelogs.fnafmw.com
 
 # CONDITION: {MONTH} = 12 (doesnt work rn)
 # Happy Holidays from the OVDR Studios team!
