@@ -4,13 +4,11 @@
 # Available variables: {MOD_VERSION}, {PLAYER}, {DATE}, {TIME}, etc.
 # MOD VERSION is determined in CustomMainMenuScreen.java so if I forget to change it then oops -Chris
 
-#CUSTOM HEADER STUFF:
-# HEADER: Custom Developer Message
-# SHOW_HEADER: true
-
 CONDITION: {MOD_VERSION} = 1.4
-WE ARE ADDING THE BATTLEPASS TO MW.
-STAY TUNED.
+yo im over here stroking my shit rn.
+wanna see?
+# WE ARE ADDING THE BATTLEPASS TO MW.
+# STAY TUNED.
 
 # CONDITION: {MONTH} = 12 (doesnt work rn)
 # Happy Holidays from the OVDR Studios team!
