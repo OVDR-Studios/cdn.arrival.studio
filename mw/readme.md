@@ -6,5 +6,5 @@ Allowing us to change splash texts, the OVDR Studios memberlist, Forge's update 
 
 Made & Maintained by ChrisArrived / Arrival's Workshop.
 
-![Logo](https://fnafmw.com/assets/images/share.png)
+![Logo](https://fnafmw.com/assets/images/share.jpg)
 
