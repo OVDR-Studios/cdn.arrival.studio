@@ -5,8 +5,7 @@
 # MOD VERSION is determined in CustomMainMenuScreen.java so if I forget to change it then oops -Chris
 
 CONDITION: {MOD_VERSION} = 1.4
-HI QA TESTING GOATS!! HELLO!! HI!!
-make sure to read up b4 testing :D
+HI HLB!!
 # WE ARE ADDING THE BATTLEPASS TO MW.
 # STAY TUNED.
 
