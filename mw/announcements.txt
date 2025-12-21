@@ -5,7 +5,7 @@
 # MOD VERSION is determined in CustomMainMenuScreen.java so if I forget to change it then oops -Chris
 
 CONDITION: {MOD_VERSION} = 1.4
-I hate charity.
+Donate to One More Night of Christmas!
 # WE ARE ADDING THE BATTLEPASS TO MW.
 # STAY TUNED.
 
