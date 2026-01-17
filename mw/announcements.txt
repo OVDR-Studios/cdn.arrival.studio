@@ -21,3 +21,5 @@ CONDITION: {MOD_VERSION} = 1.4
 # - Management
 
 CuppaTeaExe is public enemy #1
+Wanted: Dead or Alive
+Reward: 1.4 publicly releasing
