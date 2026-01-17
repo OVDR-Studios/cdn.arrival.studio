@@ -5,7 +5,6 @@
 # MOD VERSION is determined in CustomMainMenuScreen.java so if I forget to change it then oops -Chris
 
 CONDITION: {MOD_VERSION} = 1.4
-Donate to One More Night of Christmas!
 # WE ARE ADDING THE BATTLEPASS TO MW.
 # STAY TUNED.
 
@@ -20,3 +19,5 @@ Donate to One More Night of Christmas!
 # Announcement without condition (always shows even with other announcements)
 # Check out our Discord at https://discord.gg/ovdr for updates and community discussion!
 # - Management
+
+CuppaTeaExe is public enemy #1
