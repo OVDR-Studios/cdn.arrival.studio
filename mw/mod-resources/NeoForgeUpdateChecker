@@ -1,0 +1,10 @@
+{
+    "homepage": "https://fnafmw.com/#downloads",
+    "1.21.1": {
+        "1.0.0": "A complete revamp of the mod!", 
+    },
+    "promos": {
+        "1.21.1-latest": "1.0.0",
+        "1.21.1-recommended": "1.0.0",
+    }
+}
