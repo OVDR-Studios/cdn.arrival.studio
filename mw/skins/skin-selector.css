@@ -172,7 +172,7 @@
     text-align:center;
   }
   #mcskin-siname { color:#3e3e3e; font-size:clamp(14px,2.8vw,30px); text-shadow:1px 1px 0 rgba(255,255,255,0.3); letter-spacing:0.5px; }
-  #mcskin-sidesc { color:#555; font-size:clamp(10px,1.8vw,20px); text-shadow:1px 1px 0 rgba(255,255,255,0.2); margin-top:2px; }
+  #mcskin-sidesc { color:#555; font-size:clamp(10px,1.8vw,20px); text-shadow:1px 1px 0 rgba(255,255,255,0.2); margin-top:4px; }
 
   #mcskin-dlbtns {
     display:flex; flex-direction:column; gap:3px;
