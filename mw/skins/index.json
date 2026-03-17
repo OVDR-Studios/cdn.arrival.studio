@@ -16,7 +16,7 @@
     {
       "name": "THE GOON PACK...",
       "id": "goon",
-      "description": "BEWARE: DO NOT DOWNLOAD. YOU WILL BE FORCED TO GOONATORY.",
+      "description": "made this just to test multiple skinpacks",
       "image": "cover.png",
       "skins": [
         { "name": "you dont even wanna know bro...", "render": "Jeremy_render.png",   "file": "Jeremy.png",    "desc": "you dont even wanna know bro..." }
