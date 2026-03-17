@@ -117,8 +117,14 @@
   function navSkin(tgt){
     const pk=D.skinPacks[pI];
     if(anim||0>tgt||tgt>=pk.skins.length||tgt===sI)return;
+    const diff=tgt-sI;
+    if(diff!==1&&diff!==-1){
+      sI=tgt;
+      renderCar();
+      return;
+    }
     anim=true;
-    const dir=tgt>sI?1:-1;
+    const dir=diff;
     const tr=$('mcskin-track');
     const slots=tr.children;
     const gap=parseFloat(getComputedStyle(tr).gap)||0;
