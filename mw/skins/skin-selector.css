@@ -1,8 +1,8 @@
-  #mcskin-app *, #mcskin-app *::before, #mcskin-app *::after { margin:0; padding:0; box-sizing:border-box; }
+#mcskin-app *, #mcskin-app *::before, #mcskin-app *::after { margin:0; padding:0; box-sizing:border-box; }
 
   #mcskin-app {
-    width:100vw; height:100vh; height:100dvh;
-    position:fixed; top:0; left:0;
+    width:100vw; height:calc(100vh - 2.5rem); height:calc(100dvh - 2.5rem);
+    position:fixed; top:2.5rem; left:0;
     overflow:hidden;
     font-family:'Silkscreen',monospace;
     image-rendering:pixelated;
@@ -210,6 +210,7 @@
   @keyframes mcskin-dts { 0%{content:''} 25%{content:'.'} 50%{content:'..'} 75%{content:'...'} }
 
   @media (max-width:580px) {
+    #mcskin-app { top:0; height:100vh; height:100dvh; }
     #mcskin-frame { flex-direction:column; margin:0.5vh 1vw 0.3vh; }
     #mcskin-left {
       width:100%; max-width:none; max-height:38%;
