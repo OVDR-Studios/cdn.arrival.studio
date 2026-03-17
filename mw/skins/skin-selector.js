@@ -113,7 +113,7 @@
       sl.onclick=()=>{if(idx!==sI)navSkin(idx);};
       sl.appendChild(img); tr.appendChild(sl);
     }
-    updSkinInfo(); updPreview();
+    updSkinInfo();
   }
 
   function navSkin(tgt){
