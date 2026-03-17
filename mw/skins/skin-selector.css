@@ -123,7 +123,7 @@
     text-align:center; flex-shrink:0;
   }
   #mcskin-rptitle { color:#fff; font-size:clamp(11px,2.2vw,24px); text-shadow:1px 1px 0 rgba(0,0,0,0.7); letter-spacing:0.8px; }
-  #mcskin-rpsub { color:#ccc; font-size:clamp(7px,1.2vw,14px); text-shadow:1px 1px 0 #000; margin-top:1px; }
+  #mcskin-rpsub { color:#ccc; font-size:clamp(7px,1.2vw,14px); text-shadow:1px 1px 0 #000; margin-top:2px; }
 
   #mcskin-car {
     flex:1; min-height:0;
