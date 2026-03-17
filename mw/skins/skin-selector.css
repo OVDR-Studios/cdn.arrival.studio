@@ -180,16 +180,16 @@
   }
   #mcskin-app .dl-sq {
     font-family:'Minecraft',monospace;
-    font-size:clamp(7px,1.2vw,14px);
+    font-size:clamp(9px,1.5vw,16px);
     color:#ffffff;
     text-shadow:1px 1px 0 #2a2a2a;
     background:#9e9e9e;
     background-image:linear-gradient(180deg, #c7c7c7 0px, #c7c7c7 1px, #9e9e9e 1px, #9e9e9e calc(100% - 2px), #8d8d8d calc(100% - 2px));
     border:2px solid #020000;
     cursor:pointer;
-    width:auto; min-width:clamp(80px,10vw,140px); height:clamp(30px,4vw,48px);
+    width:auto; min-width:clamp(100px,13vw,180px); height:clamp(34px,4.5vw,54px);
     display:flex; align-items:center; justify-content:center;
-    padding:2px clamp(8px,1.2vw,16px);
+    padding:2px clamp(10px,1.5vw,20px);
     white-space:nowrap;
   }
   #mcskin-app .dl-sq:hover { border-color:#ffffff; }
