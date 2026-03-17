@@ -7,10 +7,10 @@
       "description": "To celebrate Frickbear's 3 release, we've published our nightguard skins we made for our Frickbears collab trailer!",
       "image": "cover.png",
       "skins": [
-        { "name": "Jeremy",    "file": "Jeremy.png",    "desc": "Placeholder description" },
-        { "name": "Mike",     "file": "Mike.png",     "desc": "Placeholder description" },
-        { "name": "Vanessa",   "file": "Vanessa.png",   "desc": "Placeholder description" },
-        { "name": "Fritz",  "file": "Fritz.png",  "desc": "Placeholder description" }
+        { "name": "Jeremy", "render": "Jeremy_render.png",   "file": "Jeremy.png",    "desc": "Placeholder description" },
+        { "name": "Mike",     "render": "Mike_render.png",   "file": "Mike.png",     "desc": "Placeholder description" },
+        { "name": "Vanessa",   "render": "Vanessa_render.png",   "file": "Vanessa.png",   "desc": "Placeholder description" },
+        { "name": "Fritz",  "render": "Fritz_render.png",   "file": "Fritz.png",  "desc": "Placeholder description" }
       ]
     }
   ]
