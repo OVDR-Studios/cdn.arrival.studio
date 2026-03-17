@@ -74,7 +74,7 @@
     const skin=pk.skins[idx];
     const img=document.createElement('img');
     img.className='si';
-    img.src=`${BASE}/${pk.id}/${skin.file}`;
+    img.src=`${BASE}/${pk.id}/${skin.render||skin.file}`;
     img.alt=skin.name; img.draggable=false;
     img.style.height=mH+'px'; img.style.width='auto';
     img.oncontextmenu=function(){return false;};
