@@ -7,32 +7,11 @@
       "description": "To celebrate Frickbear's 3 release, we've published our nightguard skins we made for our Frickbears collab trailer!",
       "image": "cover.png",
       "skins": [
-        { "name": "Steve", "file": "steve.png" },
-        { "name": "Alex", "file": "alex.png" },
-        { "name": "Zombie", "file": "zombie.png" },
-        { "name": "Creeper", "file": "creeper.png" },
-        { "name": "Skeleton", "file": "skeleton.png" }
-      ]
-    },
-    {
-      "name": "Skin Pack 1",
-      "id": "pack1",
-      "description": "45 skins featuring characters from Halo, Gears of War & more!",
-      "image": "cover.png",
-      "skins": [
-        { "name": "Master Chief", "file": "masterchief.png" },
-        { "name": "Banjo", "file": "banjo.png" },
-        { "name": "Kazooie", "file": "kazooie.png" }
-      ]
-    },
-    {
-      "name": "Skin Pack 2",
-      "id": "pack2",
-      "description": "45 skins from Castle Crashers, Perfect Dark & more!",
-      "image": "cover.png",
-      "skins": [
-        { "name": "Green Knight", "file": "greenknight.png" },
-        { "name": "Meat Boy", "file": "meatboy.png" }
+        { "name": "Steve",    "file": "steve.png",    "desc": "The classic default skin" },
+        { "name": "Alex",     "file": "alex.png",     "desc": "The other classic default" },
+        { "name": "Zombie",   "file": "zombie.png",   "desc": "A zombie skin" },
+        { "name": "Creeper",  "file": "creeper.png",  "desc": "Creeper? Aw man" },
+        { "name": "Skeleton", "file": "skeleton.png", "desc": "Bones!" }
       ]
     }
   ]
