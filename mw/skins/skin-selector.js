@@ -1,254 +1,241 @@
-(function(){
-  const JSON_URL = 'https://cdn.arrival.studio/mw/skins/index.json';
-  const BASE     = 'https://cdn.arrival.studio/mw/skins';
-  const CLICK_SND = 'https://cdn.arrival.studio/mw/site/click.mp3';
+#mcskin-app *, #mcskin-app *::before, #mcskin-app *::after { margin:0; padding:0; box-sizing:border-box; }
 
-  let D=null, pI=0, sI=0, anim=false, tx=0, td=0;
-  const $=id=>document.getElementById(id);
-
-  var clickAudio = new Audio(CLICK_SND);
-  clickAudio.volume = 0.4;
-  clickAudio.preload = 'auto';
-  function playClick(){
-    clickAudio.currentTime = 0;
-    clickAudio.play().catch(function(){});
+  #mcskin-app {
+    width:100vw; height:calc(100vh - 2.5rem); height:calc(100dvh - 2.5rem);
+    position:fixed; top:2.5rem; left:0;
+    overflow:hidden;
+    font-family:'Minecraft',monospace;
+    image-rendering:pixelated;
+    -webkit-font-smoothing:none;
+    -moz-osx-font-smoothing:grayscale;
+    user-select:none; -webkit-user-select:none;
+    background:#111;
+    display:flex; flex-direction:column;
+    z-index:1;
   }
 
-  async function init(){
-    try {
-      const r=await fetch(JSON_URL); if(!r.ok) throw 0;
-      D=await r.json();
-    } catch(e){
-      D={skinPacks:[
-        {name:'No Pack: Default Skins',id:'default',description:'Default Skins',image:'cover.png',
-          skins:[
-            {name:'Steve',file:'steve.png',desc:'The classic default skin'},
-            {name:'Alex',file:'alex.png',desc:'The other classic default'},
-            {name:'Zombie',file:'zombie.png',desc:'A zombie skin'},
-            {name:'Creeper',file:'creeper.png',desc:'Creeper? Aw man'},
-            {name:'Skeleton',file:'skeleton.png',desc:'Bones!'}
-          ]},
-        {name:'Favorite Skins',id:'favorites',description:'Your favorites',image:'cover.png',
-          skins:[
-            {name:'Custom Steve',file:'customsteve.png',desc:'A custom Steve variant'}
-          ]},
-        {name:'Creators Pack',id:'creators',description:'Dev Pack',image:'cover.png',
-          skins:[
-            {name:'RedRain0o0',file:'redrain.png',desc:'Created new defaults and UI'},
-            {name:'Builder',file:'builder.png',desc:'Builds amazing things'},
-            {name:'Explorer',file:'explorer.png',desc:'Finds new worlds'},
-            {name:'Miner',file:'miner.png',desc:'Digs deep'},
-            {name:'Warrior',file:'warrior.png',desc:'Fights the mobs'},
-            {name:'Farmer',file:'farmer.png',desc:'Tends the crops'}
-          ]}
-      ]};
+  #mcskin-app img {
+    -webkit-user-drag:none; user-select:none; -webkit-touch-callout:none;
+    pointer-events:none;
+  }
+  #mcskin-app .sk { cursor:pointer; }
+
+  #mcskin-preview img { pointer-events:none; }
+
+  #mcskin-bg {
+    position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:0;
+    background-color:#4a6a4a;
+    background-size:cover; background-position:center;
+    filter:blur(4px) brightness(0.68);
+    transform:scale(1.08);
+  }
+
+  #mcskin-frame {
+    position:relative; z-index:10;
+    flex:1; min-height:0;
+    display:flex; flex-direction:row;
+    margin:1.5vh 2vw 1.5vh;
+    gap:0;
+  }
+
+  #mcskin-left {
+    width:36%; max-width:440px; min-width:160px;
+    background:#dcdcdc;
+    border:3px solid #020000;
+    border-right:2px solid #020000;
+    box-shadow:inset 2px 2px 0 0 #ffffff, inset -2px -2px 0 0 #6a6a6a;
+    display:flex; flex-direction:column;
+    padding:8px;
+    flex-shrink:0;
+  }
+
+  #mcskin-preview {
+    width:100%; aspect-ratio:1/1; max-height:48%;
+    background:#8b8b8b;
+    border:3px solid #020000;
+    box-shadow:inset 2px 2px 0 0 #ffffff, inset -2px -2px 0 0 #555;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden; flex-shrink:0; margin-bottom:6px;
+  }
+  #mcskin-preview img { max-width:88%; max-height:88%; image-rendering:pixelated; object-fit:contain; }
+  #mcskin-preview .ph { color:#555; font-size:clamp(16px,5vw,48px); }
+
+  #mcskin-btns {
+    background:#c6c6c6;
+    border-top:2px solid #6a6a6a; border-left:2px solid #6a6a6a;
+    border-right:2px solid #ffffff; border-bottom:2px solid #ffffff;
+    padding:4px;
+    display:flex; flex-direction:column; gap:2px;
+    flex:1; min-height:0;
+    overflow-y:auto; scrollbar-width:none;
+  }
+  #mcskin-btns::-webkit-scrollbar { display:none; }
+
+  #mcskin-app .pk-btn {
+    font-family:'Minecraft',monospace;
+    font-size:clamp(7px,1.3vw,14px);
+    color:#ffffff;
+    text-shadow:1px 1px 0 #2a2a2a;
+    background:#9e9e9e;
+    background-image:linear-gradient(180deg, #c7c7c7 0px, #c7c7c7 1px, #9e9e9e 1px, #9e9e9e calc(100% - 2px), #8d8d8d calc(100% - 2px));
+    border:2px solid #020000;
+    padding:clamp(4px,0.7vh,10px) clamp(6px,1vw,14px);
+    cursor:pointer;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    text-align:center; flex-shrink:0;
+  }
+  #mcskin-app .pk-btn:hover { border-color:#ffffff; }
+  #mcskin-app .pk-btn.sel { border-color:#ffffff; }
+
+  @media (max-width:580px) {
+    #mcskin-app .pk-btn { white-space:normal; overflow:visible; text-overflow:clip; line-height:1.2; }
+  }
+
+  #mcskin-right {
+    flex:1; min-width:0;
+    display:flex; flex-direction:column;
+    border:3px solid #020000;
+    box-shadow:inset 2px 2px 0 0 #ffffff, inset -2px -2px 0 0 #6a6a6a;
+    background:#dcdcdc;
+    overflow:hidden; position:relative;
+    padding:4px;
+  }
+
+  #mcskin-rinner {
+    display:flex; flex-direction:column;
+    flex:1; min-height:0; min-width:0;
+    border:2px solid #020000;
+    overflow:hidden; position:relative;
+  }
+
+  /* Bottom row: info box + square buttons side by side in #dcdcdc zone */
+  #mcskin-rbottom {
+    display:flex; flex-direction:row;
+    align-items:stretch;
+    flex-shrink:0;
+    gap:4px;
+    margin-top:4px;
+  }
+
+  #mcskin-rphdr {
+    background:rgba(0,0,0,0.45);
+    padding:clamp(5px,1vh,14px) clamp(8px,1.2vw,18px);
+    text-align:center; flex-shrink:0;
+  }
+  #mcskin-rptitle { color:#fff; font-size:clamp(11px,2.2vw,24px); text-shadow:1px 1px 0 rgba(0,0,0,0.7); letter-spacing:0.8px; }
+  #mcskin-rpsub { color:#ccc; font-size:clamp(7px,1.2vw,14px); text-shadow:1px 1px 0 #000; margin-top:1px; }
+
+  #mcskin-car {
+    flex:1; min-height:0;
+    position:relative; overflow:hidden;
+    background:transparent;
+  }
+
+  #mcskin-track {
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    gap:clamp(8px, 1.5vw, 20px);
+    position:absolute;
+    bottom:4px; left:0; right:0; top:0;
+  }
+  #mcskin-track.anim { transition:transform 0.18s cubic-bezier(0.25,0.46,0.45,0.94); }
+
+  #mcskin-app .sk {
+    display:flex; flex-direction:column; align-items:center;
+    justify-content:flex-end; flex-shrink:0; cursor:pointer;
+    transition:opacity 0.1s ease;
+  }
+  #mcskin-app .sk .si {
+    image-rendering:pixelated;
+    filter:brightness(0.62);
+    transition:filter 0.1s ease;
+  }
+  #mcskin-app .sk.act .si { filter:brightness(1); }
+  #mcskin-app .sk.act { z-index:2; position:relative; }
+  #mcskin-app .sk:not(.act) { opacity:0.68; }
+  #mcskin-app .sk:not(.act):hover { opacity:0.82; }
+  #mcskin-app .sk .si-err {
+    display:flex; align-items:center; justify-content:center;
+    background:rgba(60,60,60,0.35);
+    border:2px dashed rgba(255,255,255,0.12);
+    color:rgba(255,255,255,0.2);
+    font-family:inherit;
+  }
+
+  #mcskin-sinfo {
+    background:#c6c6c6;
+    border-top:2px solid #686868; border-right:2px solid #ffffff;
+    border-bottom:2px solid #ffffff; border-left:2px solid #686868;
+    padding:clamp(4px,0.7vh,12px) clamp(6px,1vw,14px);
+    flex:1; min-width:0;
+    text-align:center;
+  }
+  #mcskin-siname { color:#3e3e3e; font-size:clamp(14px,2.8vw,30px); text-shadow:1px 1px 0 rgba(255,255,255,0.3); letter-spacing:0.5px; }
+  #mcskin-sidesc { color:#555; font-size:clamp(10px,1.8vw,20px); text-shadow:1px 1px 0 rgba(255,255,255,0.2); margin-top:2px; }
+
+  #mcskin-dlbtns {
+    display:flex; flex-direction:column; gap:3px;
+    flex-shrink:0; justify-content:flex-end;
+  }
+  #mcskin-app .dl-sq {
+    font-family:'Minecraft',monospace;
+    font-size:clamp(7px,1.2vw,14px);
+    color:#ffffff;
+    text-shadow:1px 1px 0 #2a2a2a;
+    background:#9e9e9e;
+    background-image:linear-gradient(180deg, #c7c7c7 0px, #c7c7c7 1px, #9e9e9e 1px, #9e9e9e calc(100% - 2px), #8d8d8d calc(100% - 2px));
+    border:2px solid #020000;
+    cursor:pointer;
+    width:auto; min-width:clamp(80px,10vw,140px); height:clamp(30px,4vw,48px);
+    display:flex; align-items:center; justify-content:center;
+    padding:2px clamp(8px,1.2vw,16px);
+    white-space:nowrap;
+  }
+  #mcskin-app .dl-sq:hover { border-color:#ffffff; }
+
+  /* Bottom bar removed — buttons are inside skin info box */
+
+  #mcskin-toast {
+    position:fixed; top:50%; left:50%;
+    transform:translate(-50%,-50%) scale(0.92);
+    z-index:100;
+    background:#c6c6c6; border:3px solid #020000;
+    box-shadow:inset 2px 2px 0 #fff, inset -2px -2px 0 #6a6a6a;
+    padding:1.5vh 3vw;
+    font-family:'Minecraft',monospace; font-size:clamp(8px,1.3vw,15px);
+    color:#3e3e3e; text-shadow:1px 1px 0 rgba(255,255,255,0.3);
+    opacity:0; pointer-events:none;
+    transition:opacity 0.2s, transform 0.2s;
+    text-align:center; max-width:80vw;
+  }
+  #mcskin-toast.show { opacity:1; pointer-events:auto; transform:translate(-50%,-50%) scale(1); }
+
+  #mcskin-ld {
+    position:absolute; inset:0; z-index:999;
+    display:flex; align-items:center; justify-content:center;
+    background:#111; color:#777;
+    font-family:'Minecraft',monospace; font-size:clamp(10px,2vw,18px);
+    transition:opacity 0.3s;
+  }
+  #mcskin-ld.done { opacity:0; pointer-events:none; }
+  .mcskin-ldot::after { content:''; animation:mcskin-dts 1.4s steps(4,end) infinite; }
+  @keyframes mcskin-dts { 0%{content:''} 25%{content:'.'} 50%{content:'..'} 75%{content:'...'} }
+
+  @media (max-width:580px) {
+    #mcskin-app { top:0; height:100vh; height:100dvh; }
+    #mcskin-frame { flex-direction:column; margin:0.5vh 1vw 0.3vh; }
+    #mcskin-left {
+      width:100%; max-width:none; max-height:38%;
+      flex-direction:row; padding:5px;
+      border-right:3px solid #020000; border-bottom:2px solid #020000;
     }
-    if(D.background){
-      const u=D.background.startsWith('http')?D.background:`${BASE}/${D.background}`;
-      $('mcskin-bg').style.backgroundImage=`url('${u}')`;
-    }
-    renderBtns();
-    selPack(0);
-    $('mcskin-ld').classList.add('done');
+    #mcskin-preview { width:auto; height:100%; aspect-ratio:1/1; margin-bottom:0; margin-right:5px; max-height:100%; max-width:30%; flex-shrink:0; }
+    #mcskin-btns { flex:1; min-width:0; }
+    #mcskin-right { min-height:0; }
   }
-
-  function renderBtns(){
-    const c=$('mcskin-btns'); c.innerHTML='';
-    D.skinPacks.forEach((p,i)=>{
-      const b=document.createElement('button');
-      b.className='pk-btn'+(i===pI?' sel':'');
-      b.textContent=p.name;
-      b.onclick=()=>{playClick();selPack(i);};
-      c.appendChild(b);
-    });
+  @media (max-height:400px) {
+    #mcskin-frame { margin:0.3vh 1vw 0.2vh; }
+    #mcskin-left { padding:3px; }
+    #mcskin-app .pk-btn { padding:clamp(2px,0.4vh,5px) clamp(4px,0.6vw,8px); }
   }
-
-  function selPack(i){
-    pI=i; sI=0;
-    const btns=$('mcskin-btns').children;
-    for(let j=0;btns.length>j;j++) btns[j].className='pk-btn'+(j===pI?' sel':'');
-    const pk=D.skinPacks[pI];
-    $('mcskin-rptitle').textContent=pk.name;
-    $('mcskin-rpsub').textContent=pk.description||'';
-    updPreview(); renderCar();
-  }
-
-  function updPreview(){
-    const pk=D.skinPacks[pI];
-    const img=$('mcskin-pvimg'), ph=$('mcskin-pvph');
-    if(pk&&pk.image){
-      img.src=`${BASE}/${pk.id}/${pk.image}`;
-      img.alt=pk.name;
-      img.style.display='block'; ph.style.display='none';
-      img.oncontextmenu=function(){return false;};
-      img.ondragstart=function(){return false;};
-      img.onerror=()=>{img.style.display='none';ph.style.display='block';};
-    } else { img.style.display='none'; ph.style.display='block'; }
-  }
-
-  function buildSlot(pk, idx, slW, mH, total){
-    const sl=document.createElement('div');
-    sl.className='sk';
-    sl.style.width=slW+'px';
-    sl.style.height=mH+'px';
-    if(0>idx||idx>=total)return sl;
-    const skin=pk.skins[idx];
-    const img=document.createElement('img');
-    img.className='si';
-    img.src=`${BASE}/${pk.id}/${skin.file}`;
-    img.alt=skin.name; img.draggable=false;
-    img.style.height=mH+'px'; img.style.width='auto';
-    img.oncontextmenu=function(){return false;};
-    img.ondragstart=function(){return false;};
-    img.onerror=()=>{
-      img.remove();
-      const e=document.createElement('div'); e.className='si-err';
-      e.style.width=(mH*0.44)+'px'; e.style.height=mH+'px';
-      e.style.fontSize=(mH*0.12)+'px'; e.textContent='?';
-      sl.appendChild(e);
-    };
-    sl.onclick=()=>{if(idx!==sI){playClick();navSkin(idx);}};
-    sl.appendChild(img);
-    return sl;
-  }
-
-  function renderCar(){
-    const tr=$('mcskin-track');
-    tr.innerHTML=''; tr.classList.remove('anim'); tr.style.transform='';
-    const pk=D.skinPacks[pI];
-    if(!pk||!pk.skins.length) return;
-
-    const area=$('mcskin-car');
-    const aH=area.clientHeight;
-    const aW=area.clientWidth;
-    const mH=aH - 8;
-    const sc=260>aW?1:450>aW?2:3;
-    const slW=Math.max(mH*0.48, 44);
-    const total=pk.skins.length;
-
-    for(let o=-sc;sc>=o;o++){
-      const idx=sI+o;
-      const sl=buildSlot(pk, idx, slW, mH, total);
-      if(o===0) sl.classList.add('act');
-      tr.appendChild(sl);
-    }
-    updSkinInfo();
-  }
-
-  function navSkin(tgt){
-    const pk=D.skinPacks[pI];
-    if(anim||0>tgt||tgt>=pk.skins.length||tgt===sI)return;
-    anim=true;
-    const dir=tgt>sI?1:-1;
-    const tr=$('mcskin-track');
-    const slots=tr.children;
-    const gap=parseFloat(getComputedStyle(tr).gap)||0;
-    const slW=slots[0]?(slots[0].offsetWidth+gap):60;
-
-    const area=$('mcskin-car');
-    const aH=area.clientHeight;
-    const aW=area.clientWidth;
-    const mH=aH - 8;
-    const sc=260>aW?1:450>aW?2:3;
-    const total=pk.skins.length;
-
-    tr.classList.add('anim');
-    tr.style.transform=`translateX(${-dir*slW}px)`;
-    setTimeout(()=>{
-      tr.classList.remove('anim'); tr.style.transform='';
-      sI=tgt;
-      if(dir===1){
-        tr.removeChild(tr.firstChild);
-        const newIdx=sI+sc;
-        tr.appendChild(buildSlot(pk, newIdx, Math.max(mH*0.48,44), mH, total));
-      } else {
-        tr.removeChild(tr.lastChild);
-        const newIdx=sI-sc;
-        tr.insertBefore(buildSlot(pk, newIdx, Math.max(mH*0.48,44), mH, total), tr.firstChild);
-      }
-      for(let i=0;slots.length>i;i++){
-        const o=i-sc;
-        slots[i].classList.toggle('act', o===0);
-        const idx=sI+o;
-        slots[i].onclick=(0>idx||idx>=total)?null:((function(ci){return function(){if(ci!==sI){playClick();navSkin(ci);}};})(idx));
-      }
-      updSkinInfo();
-      anim=false;
-    },185);
-  }
-
-  function moveSK(d){
-    const pk=D.skinPacks[pI];
-    const n=sI+d; if(0>n||n>=pk.skins.length)return;
-    navSkin(n);
-  }
-
-  function updSkinInfo(){
-    const pk=D.skinPacks[pI], sk=pk.skins[sI];
-    $('mcskin-siname').textContent=sk.name;
-    $('mcskin-sidesc').textContent=sk.desc||'';
-  }
-
-  // Expose to global for onclick handlers
-  window.mcDlSkin=function(){
-    playClick();
-    const pk=D.skinPacks[pI], sk=pk.skins[sI];
-    const a=document.createElement('a');
-    a.href=`${BASE}/${pk.id}/${sk.file}`; a.download=sk.file;
-    a.target='_blank'; a.rel='noopener';
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    toast(`Downloading ${sk.name}...`);
-  };
-
-  window.mcDlAll=async function(){
-    playClick();
-    const pk=D.skinPacks[pI];
-    toast(`Zipping ${pk.skins.length} skins...`);
-    try{
-      const zip=new JSZip();
-      const f=zip.folder(pk.name.replace(new RegExp('[^a-zA-Z0-9_ -]','g'),''));
-      await Promise.all(pk.skins.map(async s=>{
-        try{const r=await fetch(`${BASE}/${pk.id}/${s.file}`);if(!r.ok)throw 0;f.file(s.file,await r.blob());}catch{}
-      }));
-      const b=await zip.generateAsync({type:'blob'});
-      const u=URL.createObjectURL(b);
-      const a=document.createElement('a');
-      a.href=u; a.download=`${pk.id}-skins.zip`;
-      document.body.appendChild(a); a.click(); document.body.removeChild(a);
-      URL.revokeObjectURL(u);
-      toast(`Downloaded ${pk.name}!`);
-    }catch(e){console.error(e);toast('Download failed');}
-  };
-
-  function toast(m){
-    const t=$('mcskin-toast'); t.textContent=m; t.classList.add('show');
-    clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'),2000);
-  }
-
-  document.addEventListener('keydown',e=>{
-    if(!D)return;
-    if(e.key==='ArrowUp'){e.preventDefault();playClick();const n=pI-1;if(n>=0)selPack(n);renderBtns();}
-    else if(e.key==='ArrowDown'){e.preventDefault();playClick();const n=pI+1;if(D.skinPacks.length>n)selPack(n);renderBtns();}
-    else if(e.key==='ArrowLeft'){playClick();moveSK(-1);}
-    else if(e.key==='ArrowRight'){playClick();moveSK(1);}
-    else if(e.key==='Enter'||e.key===' '){e.preventDefault();window.mcDlSkin();}
-  });
-
-  (function(){
-    const el=$('mcskin-car');
-    el.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;td=0;},{passive:true});
-    el.addEventListener('touchmove',e=>{td=e.touches[0].clientX-tx;},{passive:true});
-    el.addEventListener('touchend',()=>{if(Math.abs(td)>30){playClick();td>0?moveSK(-1):moveSK(1);}td=0;});
-  })();
-
-  var resizeT=0;
-  window.addEventListener('resize',()=>{
-    clearTimeout(resizeT);
-    resizeT=setTimeout(()=>{
-      if(!D)return;
-      anim=false;
-      renderCar();
-    },150);
-  });
-  init();
-})();
