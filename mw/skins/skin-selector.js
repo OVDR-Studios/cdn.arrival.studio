@@ -114,51 +114,31 @@
     updSkinInfo();
   }
 
+  var navCooldown=false;
   function navSkin(tgt){
     const pk=D.skinPacks[pI];
-    if(anim||0>tgt||tgt>=pk.skins.length||tgt===sI)return;
-    const diff=tgt-sI;
-    if(diff!==1&&diff!==-1){
-      sI=tgt;
-      renderCar();
-      return;
-    }
+    if(anim||navCooldown||0>tgt||tgt>=pk.skins.length||tgt===sI)return;
     anim=true;
-    const dir=diff;
+    navCooldown=true;
+    const diff=tgt-sI;
+    const dir=diff>0?1:-1;
+    const steps=Math.abs(diff);
     const tr=$('mcskin-track');
     const slots=tr.children;
     const gap=parseFloat(getComputedStyle(tr).gap)||0;
     const slW=slots[0]?(slots[0].offsetWidth+gap):60;
 
-    const area=$('mcskin-car');
-    const aH=area.clientHeight;
-    const aW=area.clientWidth;
-    const mH=aH - 8;
-    const sc=260>aW?1:450>aW?2:3;
-    const total=pk.skins.length;
+    // Immediately remove highlight from old active
+    for(let i=0;slots.length>i;i++) slots[i].classList.remove('act');
 
     tr.classList.add('anim');
-    tr.style.transform=`translateX(${-dir*slW}px)`;
+    tr.style.transform=`translateX(${-dir*steps*slW}px)`;
     setTimeout(()=>{
       tr.classList.remove('anim'); tr.style.transform='';
       sI=tgt;
-      if(dir===1){
-        tr.removeChild(tr.firstChild);
-        const newIdx=sI+sc;
-        tr.appendChild(buildSlot(pk, newIdx, Math.max(mH*0.48,44), mH, total));
-      } else {
-        tr.removeChild(tr.lastChild);
-        const newIdx=sI-sc;
-        tr.insertBefore(buildSlot(pk, newIdx, Math.max(mH*0.48,44), mH, total), tr.firstChild);
-      }
-      for(let i=0;slots.length>i;i++){
-        const o=i-sc;
-        slots[i].classList.toggle('act', o===0);
-        const idx=sI+o;
-        slots[i].onclick=(0>idx||idx>=total)?null:((function(ci){return function(){if(ci!==sI)navSkin(ci);};})(idx));
-      }
-      updSkinInfo();
+      renderCar();
       anim=false;
+      setTimeout(()=>{navCooldown=false;},80);
     },185);
   }
 
