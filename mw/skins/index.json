@@ -10,7 +10,7 @@
         { "name": "Jeremy Fitzgerald", "render": "Jeremy_render.png",   "file": "Jeremy.png",    "desc": "Gosh Jeremy, what's a fella like you doing working at a place like this?" },
         { "name": "Mike Schmidt",     "render": "Mike_render.png",   "file": "Mike.png",     "desc": "Working at the last place in town that would even think about hiring a blasphemously incompetent neanderthal." },
         { "name": "Vanessa Shelly",   "render": "Vanessa_render.png",   "file": "Vanessa.png",   "desc": "Guess things have a funny way of working themselves out." },
-        { "name": "Fritz Smith",  "render": "Fritz_render.png",   "file": "Fritz.png",  "desc": "I forgot my name!" }
+        { "name": "Fritz Smith",  "render": "Fritz_render.png",   "file": "Fritz.png",  "desc": "I forgot my name." }
       ]
     }
   ]
