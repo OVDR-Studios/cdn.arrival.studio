@@ -1,9 +1,18 @@
 (function(){
   const JSON_URL = 'https://cdn.arrival.studio/mw/skins/index.json';
   const BASE     = 'https://cdn.arrival.studio/mw/skins';
+  const CLICK_SND = 'https://cdn.arrival.studio/mw/site/click.mp3';
 
   let D=null, pI=0, sI=0, anim=false, tx=0, td=0;
   const $=id=>document.getElementById(id);
+
+  var clickAudio = new Audio(CLICK_SND);
+  clickAudio.volume = 0.4;
+  clickAudio.preload = 'auto';
+  function playClick(){
+    clickAudio.currentTime = 0;
+    clickAudio.play().catch(function(){});
+  }
 
   async function init(){
     try {
@@ -49,7 +58,7 @@
       const b=document.createElement('button');
       b.className='pk-btn'+(i===pI?' sel':'');
       b.textContent=p.name;
-      b.onclick=()=>selPack(i);
+      b.onclick=()=>{playClick();selPack(i);};
       c.appendChild(b);
     });
   }
@@ -71,6 +80,8 @@
       img.src=`${BASE}/${pk.id}/${pk.image}`;
       img.alt=pk.name;
       img.style.display='block'; ph.style.display='none';
+      img.oncontextmenu=function(){return false;};
+      img.ondragstart=function(){return false;};
       img.onerror=()=>{img.style.display='none';ph.style.display='block';};
     } else { img.style.display='none'; ph.style.display='block'; }
   }
@@ -87,6 +98,8 @@
     img.src=`${BASE}/${pk.id}/${skin.file}`;
     img.alt=skin.name; img.draggable=false;
     img.style.height=mH+'px'; img.style.width='auto';
+    img.oncontextmenu=function(){return false;};
+    img.ondragstart=function(){return false;};
     img.onerror=()=>{
       img.remove();
       const e=document.createElement('div'); e.className='si-err';
@@ -94,7 +107,7 @@
       e.style.fontSize=(mH*0.12)+'px'; e.textContent='?';
       sl.appendChild(e);
     };
-    sl.onclick=()=>{if(idx!==sI)navSkin(idx);};
+    sl.onclick=()=>{if(idx!==sI){playClick();navSkin(idx);}};
     sl.appendChild(img);
     return sl;
   }
@@ -157,7 +170,7 @@
         const o=i-sc;
         slots[i].classList.toggle('act', o===0);
         const idx=sI+o;
-        slots[i].onclick=(0>idx||idx>=total)?null:((function(ci){return function(){if(ci!==sI)navSkin(ci);};})(idx));
+        slots[i].onclick=(0>idx||idx>=total)?null:((function(ci){return function(){if(ci!==sI){playClick();navSkin(ci);}};})(idx));
       }
       updSkinInfo();
       anim=false;
@@ -178,6 +191,7 @@
 
   // Expose to global for onclick handlers
   window.mcDlSkin=function(){
+    playClick();
     const pk=D.skinPacks[pI], sk=pk.skins[sI];
     const a=document.createElement('a');
     a.href=`${BASE}/${pk.id}/${sk.file}`; a.download=sk.file;
@@ -187,6 +201,7 @@
   };
 
   window.mcDlAll=async function(){
+    playClick();
     const pk=D.skinPacks[pI];
     toast(`Zipping ${pk.skins.length} skins...`);
     try{
@@ -212,10 +227,10 @@
 
   document.addEventListener('keydown',e=>{
     if(!D)return;
-    if(e.key==='ArrowUp'){e.preventDefault();const n=pI-1;if(n>=0)selPack(n);renderBtns();}
-    else if(e.key==='ArrowDown'){e.preventDefault();const n=pI+1;if(D.skinPacks.length>n)selPack(n);renderBtns();}
-    else if(e.key==='ArrowLeft'){moveSK(-1);}
-    else if(e.key==='ArrowRight'){moveSK(1);}
+    if(e.key==='ArrowUp'){e.preventDefault();playClick();const n=pI-1;if(n>=0)selPack(n);renderBtns();}
+    else if(e.key==='ArrowDown'){e.preventDefault();playClick();const n=pI+1;if(D.skinPacks.length>n)selPack(n);renderBtns();}
+    else if(e.key==='ArrowLeft'){playClick();moveSK(-1);}
+    else if(e.key==='ArrowRight'){playClick();moveSK(1);}
     else if(e.key==='Enter'||e.key===' '){e.preventDefault();window.mcDlSkin();}
   });
 
@@ -223,9 +238,17 @@
     const el=$('mcskin-car');
     el.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;td=0;},{passive:true});
     el.addEventListener('touchmove',e=>{td=e.touches[0].clientX-tx;},{passive:true});
-    el.addEventListener('touchend',()=>{if(Math.abs(td)>30){td>0?moveSK(-1):moveSK(1);}td=0;});
+    el.addEventListener('touchend',()=>{if(Math.abs(td)>30){playClick();td>0?moveSK(-1):moveSK(1);}td=0;});
   })();
 
-  window.addEventListener('resize',()=>{if(D)renderCar();});
+  var resizeT=0;
+  window.addEventListener('resize',()=>{
+    clearTimeout(resizeT);
+    resizeT=setTimeout(()=>{
+      if(!D)return;
+      anim=false;
+      renderCar();
+    },150);
+  });
   init();
 })();
