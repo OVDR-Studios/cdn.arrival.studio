@@ -152,6 +152,7 @@
     transition:filter 0.1s ease;
   }
   #mcskin-app .sk.act .si { filter:brightness(1); }
+  #mcskin-app .sk.act { z-index:2; position:relative; }
   #mcskin-app .sk:not(.act) { opacity:0.68; }
   #mcskin-app .sk:not(.act):hover { opacity:0.82; }
   #mcskin-app .sk .si-err {
@@ -229,7 +230,8 @@
       flex-direction:row; padding:5px;
       border-right:3px solid #020000; border-bottom:2px solid #020000;
     }
-    #mcskin-preview { width:auto; height:100%; aspect-ratio:1/1; margin-bottom:0; margin-right:5px; max-height:100%; }
+    #mcskin-preview { width:auto; height:100%; aspect-ratio:1/1; margin-bottom:0; margin-right:5px; max-height:100%; max-width:30%; flex-shrink:0; }
+    #mcskin-btns { flex:1; min-width:0; }
     #mcskin-right { min-height:0; }
   }
   @media (max-height:400px) {
