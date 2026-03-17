@@ -65,11 +65,11 @@
   }
 
   function updPreview(){
-    const pk=D.skinPacks[pI], sk=pk.skins[sI];
+    const pk=D.skinPacks[pI];
     const img=$('mcskin-pvimg'), ph=$('mcskin-pvph');
-    if(sk){
-      img.src=`${BASE}/${pk.id}/${sk.file}`;
-      img.alt=sk.name;
+    if(pk&&pk.image){
+      img.src=`${BASE}/${pk.id}/${pk.image}`;
+      img.alt=pk.name;
       img.style.display='block'; ph.style.display='none';
       img.onerror=()=>{img.style.display='none';ph.style.display='block';};
     } else { img.style.display='none'; ph.style.display='block'; }
