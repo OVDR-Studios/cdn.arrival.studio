@@ -86,7 +86,7 @@
       e.style.fontSize=(mH*0.12)+'px'; e.textContent='?';
       sl.appendChild(e);
     };
-    sl.onclick=()=>{if(idx!==sI){playClick();navSkin(idx);}};
+    sl.onclick=()=>{if(idx!==sI)navSkin(idx);};
     sl.appendChild(img);
     return sl;
   }
@@ -149,7 +149,7 @@
         const o=i-sc;
         slots[i].classList.toggle('act', o===0);
         const idx=sI+o;
-        slots[i].onclick=(0>idx||idx>=total)?null:((function(ci){return function(){if(ci!==sI){playClick();navSkin(ci);}};})(idx));
+        slots[i].onclick=(0>idx||idx>=total)?null:((function(ci){return function(){if(ci!==sI)navSkin(ci);};})(idx));
       }
       updSkinInfo();
       anim=false;
@@ -214,8 +214,8 @@
     if(!D)return;
     if(e.key==='ArrowUp'){e.preventDefault();playClick();const n=pI-1;if(n>=0)selPack(n);renderBtns();}
     else if(e.key==='ArrowDown'){e.preventDefault();playClick();const n=pI+1;if(D.skinPacks.length>n)selPack(n);renderBtns();}
-    else if(e.key==='ArrowLeft'){playClick();moveSK(-1);}
-    else if(e.key==='ArrowRight'){playClick();moveSK(1);}
+    else if(e.key==='ArrowLeft'){moveSK(-1);}
+    else if(e.key==='ArrowRight'){moveSK(1);}
     else if(e.key==='Enter'||e.key===' '){e.preventDefault();window.mcDlSkin();}
   });
 
@@ -223,7 +223,7 @@
     const el=$('mcskin-car');
     el.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;td=0;},{passive:true});
     el.addEventListener('touchmove',e=>{td=e.touches[0].clientX-tx;},{passive:true});
-    el.addEventListener('touchend',()=>{if(Math.abs(td)>30){playClick();td>0?moveSK(-1):moveSK(1);}td=0;});
+    el.addEventListener('touchend',()=>{if(Math.abs(td)>30){td>0?moveSK(-1):moveSK(1);}td=0;});
   })();
 
   var resizeT=0;
