@@ -12,6 +12,15 @@
         { "name": "Vanessa Shelly",   "render": "Vanessa_render.png",   "file": "Vanessa.png",   "desc": "Placeholder description" },
         { "name": "Fritz Smith",  "render": "Fritz_render.png",   "file": "Fritz.png",  "desc": "Placeholder description" }
       ]
+    },
+    {
+      "name": "THE GOON PACK...",
+      "id": "goon",
+      "description": "BEWARE: DO NOT DOWNLOAD. YOU WILL BE FORCED TO GOONATORY.",
+      "image": "cover.png",
+      "skins": [
+        { "name": "you dont even wanna know bro...", "render": "Jeremy_render.png",   "file": "Jeremy.png",    "desc": "you dont even wanna know bro..." }
+      ]
     }
   ]
 }
