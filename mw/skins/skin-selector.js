@@ -128,17 +128,41 @@
     const gap=parseFloat(getComputedStyle(tr).gap)||0;
     const slW=slots[0]?(slots[0].offsetWidth+gap):60;
 
-    // Immediately remove highlight from old active
-    for(let i=0;slots.length>i;i++) slots[i].classList.remove('act');
+    const area=$('mcskin-car');
+    const aH=area.clientHeight;
+    const aW=area.clientWidth;
+    const mH=aH - 8;
+    const sc=260>aW?1:450>aW?2:3;
+    const total=pk.skins.length;
 
     tr.classList.add('anim');
     tr.style.transform=`translateX(${-dir*steps*slW}px)`;
     setTimeout(()=>{
       tr.classList.remove('anim'); tr.style.transform='';
       sI=tgt;
-      renderCar();
+      // Remove/add slots to keep correct count
+      var s;
+      for(s=0;steps>s;s++){
+        if(dir===1){
+          tr.removeChild(tr.firstChild);
+          var newIdx=sI+sc-steps+1+s;
+          tr.appendChild(buildSlot(pk, newIdx, Math.max(mH*0.48,44), mH, total));
+        } else {
+          tr.removeChild(tr.lastChild);
+          var newIdx2=sI-sc+steps-1-s;
+          tr.insertBefore(buildSlot(pk, newIdx2, Math.max(mH*0.48,44), mH, total), tr.firstChild);
+        }
+      }
+      // Update act class on all slots — CSS transition handles the fade
+      for(var i=0;slots.length>i;i++){
+        var o=i-sc;
+        slots[i].classList.toggle('act', o===0);
+        var idx=sI+o;
+        slots[i].onclick=(0>idx||idx>=total)?null:((function(ci){return function(){if(ci!==sI)navSkin(ci);};})(idx));
+      }
+      updSkinInfo();
       anim=false;
-      setTimeout(()=>{navCooldown=false;},80);
+      setTimeout(()=>{navCooldown=false;},120);
     },185);
   }
 
