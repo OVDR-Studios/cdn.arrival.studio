@@ -75,6 +75,30 @@
     } else { img.style.display='none'; ph.style.display='block'; }
   }
 
+  function buildSlot(pk, idx, slW, mH, total){
+    const sl=document.createElement('div');
+    sl.className='sk';
+    sl.style.width=slW+'px';
+    sl.style.height=mH+'px';
+    if(0>idx||idx>=total)return sl;
+    const skin=pk.skins[idx];
+    const img=document.createElement('img');
+    img.className='si';
+    img.src=`${BASE}/${pk.id}/${skin.file}`;
+    img.alt=skin.name; img.draggable=false;
+    img.style.height=mH+'px'; img.style.width='auto';
+    img.onerror=()=>{
+      img.remove();
+      const e=document.createElement('div'); e.className='si-err';
+      e.style.width=(mH*0.44)+'px'; e.style.height=mH+'px';
+      e.style.fontSize=(mH*0.12)+'px'; e.textContent='?';
+      sl.appendChild(e);
+    };
+    sl.onclick=()=>{if(idx!==sI)navSkin(idx);};
+    sl.appendChild(img);
+    return sl;
+  }
+
   function renderCar(){
     const tr=$('mcskin-track');
     tr.innerHTML=''; tr.classList.remove('anim'); tr.style.transform='';
@@ -91,27 +115,9 @@
 
     for(let o=-sc;sc>=o;o++){
       const idx=sI+o;
-      const sl=document.createElement('div');
-      sl.className='sk'+(o===0?' act':'');
-      sl.style.width=slW+'px';
-      sl.style.height=mH+'px';
-      if(0>idx||idx>=total){tr.appendChild(sl);continue;}
-
-      const skin=pk.skins[idx];
-      const img=document.createElement('img');
-      img.className='si';
-      img.src=`${BASE}/${pk.id}/${skin.file}`;
-      img.alt=skin.name; img.draggable=false;
-      img.style.height=mH+'px'; img.style.width='auto';
-      img.onerror=()=>{
-        img.remove();
-        const e=document.createElement('div'); e.className='si-err';
-        e.style.width=(mH*0.44)+'px'; e.style.height=mH+'px';
-        e.style.fontSize=(mH*0.12)+'px'; e.textContent='?';
-        sl.appendChild(e);
-      };
-      sl.onclick=()=>{if(idx!==sI)navSkin(idx);};
-      sl.appendChild(img); tr.appendChild(sl);
+      const sl=buildSlot(pk, idx, slW, mH, total);
+      if(o===0) sl.classList.add('act');
+      tr.appendChild(sl);
     }
     updSkinInfo();
   }
@@ -125,11 +131,36 @@
     const slots=tr.children;
     const gap=parseFloat(getComputedStyle(tr).gap)||0;
     const slW=slots[0]?(slots[0].offsetWidth+gap):60;
+
+    const area=$('mcskin-car');
+    const aH=area.clientHeight;
+    const aW=area.clientWidth;
+    const mH=aH - 8;
+    const sc=260>aW?1:450>aW?2:3;
+    const total=pk.skins.length;
+
     tr.classList.add('anim');
     tr.style.transform=`translateX(${-dir*slW}px)`;
     setTimeout(()=>{
       tr.classList.remove('anim'); tr.style.transform='';
-      sI=tgt; renderCar(); anim=false;
+      sI=tgt;
+      if(dir===1){
+        tr.removeChild(tr.firstChild);
+        const newIdx=sI+sc;
+        tr.appendChild(buildSlot(pk, newIdx, Math.max(mH*0.48,44), mH, total));
+      } else {
+        tr.removeChild(tr.lastChild);
+        const newIdx=sI-sc;
+        tr.insertBefore(buildSlot(pk, newIdx, Math.max(mH*0.48,44), mH, total), tr.firstChild);
+      }
+      for(let i=0;slots.length>i;i++){
+        const o=i-sc;
+        slots[i].classList.toggle('act', o===0);
+        const idx=sI+o;
+        slots[i].onclick=(0>idx||idx>=total)?null:((function(ci){return function(){if(ci!==sI)navSkin(ci);};})(idx));
+      }
+      updSkinInfo();
+      anim=false;
     },185);
   }
 
