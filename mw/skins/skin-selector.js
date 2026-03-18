@@ -6,6 +6,26 @@
   let D=null, pI=0, sI=0, anim=false, tx=0, td=0;
   const $=id=>document.getElementById(id);
 
+  // Image cache - prevents re-fetching already loaded images
+  var imgCache={};
+  function preloadImg(src){
+    if(imgCache[src])return;
+    var i=new Image();
+    i.src=src;
+    imgCache[src]=i;
+  }
+  function preloadAdjacent(){
+    if(!D)return;
+    var pk=D.skinPacks[pI],total=pk.skins.length;
+    // Preload 2 ahead and 2 behind current
+    for(var d=-2;3>d;d++){
+      var idx=sI+d;
+      if(0>idx||idx>=total)continue;
+      var skin=pk.skins[idx];
+      preloadImg(BASE+'/'+pk.id+'/'+(skin.render||skin.file));
+    }
+  }
+
   var clickAudio = new Audio(CLICK_SND);
   clickAudio.volume = 0.4;
   clickAudio.preload = 'auto';
@@ -23,8 +43,8 @@
       return;
     }
     if(D.background){
-      const u=D.background.startsWith('http')?D.background:`${BASE}/${D.background}`;
-      $('mcskin-bg').style.backgroundImage=`url('${u}')`;
+      const u=D.background.startsWith('http')?D.background:BASE+'/'+D.background;
+      $('mcskin-bg').style.backgroundImage="url('"+u+"')";
     }
     renderBtns();
     selPack(0);
@@ -50,13 +70,14 @@
     $('mcskin-rptitle').textContent=pk.name;
     $('mcskin-rpsub').textContent=pk.description||'';
     updPreview(); renderCar();
+    preloadAdjacent();
   }
 
   function updPreview(){
     const pk=D.skinPacks[pI];
     const img=$('mcskin-pvimg'), ph=$('mcskin-pvph');
     if(pk&&pk.image){
-      img.src=`${BASE}/${pk.id}/${pk.image}`;
+      img.src=BASE+'/'+pk.id+'/'+pk.image;
       img.alt=pk.name;
       img.style.display='block'; ph.style.display='none';
       img.oncontextmenu=function(){return false;};
@@ -72,10 +93,13 @@
     sl.style.height=mH+'px';
     if(0>idx||idx>=total)return sl;
     const skin=pk.skins[idx];
+    const src=BASE+'/'+pk.id+'/'+(skin.render||skin.file);
     const img=document.createElement('img');
     img.className='si';
-    img.src=`${BASE}/${pk.id}/${skin.render||skin.file}`;
+    img.src=src;
     img.alt=skin.name; img.draggable=false;
+    img.loading='lazy';
+    img.decoding='async';
     img.style.height=mH+'px'; img.style.width='auto';
     img.oncontextmenu=function(){return false;};
     img.ondragstart=function(){return false;};
@@ -86,6 +110,8 @@
       e.style.fontSize=(mH*0.12)+'px'; e.textContent='?';
       sl.appendChild(e);
     };
+    // Cache this image
+    imgCache[src]=img;
     sl.onclick=()=>{if(idx!==sI)navSkin(idx);};
     sl.appendChild(img);
     return sl;
@@ -137,7 +163,7 @@
     const newSlots=[];
 
     tr.classList.add('anim');
-    tr.style.transform=`translateX(${-dir*steps*slW}px)`;
+    tr.style.transform='translateX('+(-dir*steps*slW)+'px)';
     setTimeout(()=>{
       tr.classList.remove('anim'); tr.style.transform='';
       sI=tgt;
@@ -166,7 +192,7 @@
         slots[i].onclick=(0>idx||idx>=total)?null:((function(ci){return function(){if(ci!==sI)navSkin(ci);};})(idx));
       }
       updSkinInfo();
-      // Fade in new slots next frame
+      preloadAdjacent();
       requestAnimationFrame(()=>{requestAnimationFrame(()=>{
         for(var j=0;newSlots.length>j;j++) newSlots[j].classList.remove('sk-enter');
       });});
@@ -187,13 +213,12 @@
     $('mcskin-sidesc').textContent=sk.desc||'';
   }
 
-  // Expose to global for onclick handlers
   window.mcDlSkin=async function(){
     playClick();
     const pk=D.skinPacks[pI], sk=pk.skins[sI];
     toast('Downloading '+sk.name+'...');
     try{
-      const r=await fetch(`${BASE}/${pk.id}/${sk.file}`);
+      const r=await fetch(BASE+'/'+pk.id+'/'+sk.file);
       if(!r.ok)throw 0;
       const b=await r.blob();
       const u=URL.createObjectURL(b);
@@ -207,20 +232,20 @@
   window.mcDlAll=async function(){
     playClick();
     const pk=D.skinPacks[pI];
-    toast(`Zipping ${pk.skins.length} skins...`);
+    toast('Zipping '+pk.skins.length+' skins...');
     try{
       const zip=new JSZip();
       const f=zip.folder(pk.name.replace(new RegExp('[^a-zA-Z0-9_ -]','g'),''));
       await Promise.all(pk.skins.map(async s=>{
-        try{const r=await fetch(`${BASE}/${pk.id}/${s.file}`);if(!r.ok)throw 0;f.file(s.file,await r.blob());}catch{}
+        try{const r=await fetch(BASE+'/'+pk.id+'/'+s.file);if(!r.ok)throw 0;f.file(s.file,await r.blob());}catch{}
       }));
       const b=await zip.generateAsync({type:'blob'});
       const u=URL.createObjectURL(b);
       const a=document.createElement('a');
-      a.href=u; a.download=`${pk.id}-skins.zip`;
+      a.href=u; a.download=pk.id+'-skins.zip';
       document.body.appendChild(a); a.click(); document.body.removeChild(a);
       URL.revokeObjectURL(u);
-      toast(`Downloaded ${pk.name}!`);
+      toast('Downloaded '+pk.name+'!');
     }catch(e){console.error(e);toast('Download failed');}
   };
 
@@ -251,6 +276,7 @@
     resizeT=setTimeout(()=>{
       if(!D)return;
       anim=false;
+      navCooldown=false;
       renderCar();
     },150);
   });
