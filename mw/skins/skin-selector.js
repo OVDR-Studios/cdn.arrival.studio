@@ -134,26 +134,31 @@
     const mH=aH - 8;
     const sc=260>aW?1:450>aW?2:3;
     const total=pk.skins.length;
+    const newSlots=[];
 
     tr.classList.add('anim');
     tr.style.transform=`translateX(${-dir*steps*slW}px)`;
     setTimeout(()=>{
       tr.classList.remove('anim'); tr.style.transform='';
       sI=tgt;
-      // Remove/add slots to keep correct count
       var s;
       for(s=0;steps>s;s++){
         if(dir===1){
           tr.removeChild(tr.firstChild);
-          var newIdx=sI+sc-steps+1+s;
-          tr.appendChild(buildSlot(pk, newIdx, Math.max(mH*0.48,44), mH, total));
+          var ni=sI+sc-steps+1+s;
+          var ns=buildSlot(pk, ni, Math.max(mH*0.48,44), mH, total);
+          ns.classList.add('sk-enter');
+          tr.appendChild(ns);
+          newSlots.push(ns);
         } else {
           tr.removeChild(tr.lastChild);
-          var newIdx2=sI-sc+steps-1-s;
-          tr.insertBefore(buildSlot(pk, newIdx2, Math.max(mH*0.48,44), mH, total), tr.firstChild);
+          var ni2=sI-sc+steps-1-s;
+          var ns2=buildSlot(pk, ni2, Math.max(mH*0.48,44), mH, total);
+          ns2.classList.add('sk-enter');
+          tr.insertBefore(ns2, tr.firstChild);
+          newSlots.push(ns2);
         }
       }
-      // Update act class on all slots — CSS transition handles the fade
       for(var i=0;slots.length>i;i++){
         var o=i-sc;
         slots[i].classList.toggle('act', o===0);
@@ -161,8 +166,14 @@
         slots[i].onclick=(0>idx||idx>=total)?null:((function(ci){return function(){if(ci!==sI)navSkin(ci);};})(idx));
       }
       updSkinInfo();
+      // Fade in new slots next frame
+      requestAnimationFrame(()=>{requestAnimationFrame(()=>{
+        for(var j=0;newSlots.length>j;j++) newSlots[j].classList.remove('sk-enter');
+      });});
       anim=false;
       setTimeout(()=>{navCooldown=false;},120);
+    },185);
+  }
     },185);
   }
 
