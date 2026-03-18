@@ -24,7 +24,6 @@
 
   #mcskin-bg {
     position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:0;
-    background-color:#4a6a4a;
     background-size:cover; background-position:center;
     filter:blur(4px) brightness(0.68);
     transform:scale(1.08);
