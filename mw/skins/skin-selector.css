@@ -143,7 +143,7 @@
   #mcskin-app .sk {
     display:flex; flex-direction:column; align-items:center;
     justify-content:flex-end; flex-shrink:0; cursor:pointer;
-    transition:opacity 0.3s ease;
+    transition:0.3s ease;
   }
   #mcskin-app .sk .si {
     image-rendering:pixelated;
@@ -151,7 +151,7 @@
     transition:filter 0.3s ease;
   }
   #mcskin-app .sk.act .si { filter:brightness(1); }
-  #mcskin-app .sk.act { z-index:2; position:relative; }
+  #mcskin-app .sk.act { z-index:2; position:relative; transform: scale(1.02); }
   #mcskin-app .sk:not(.act) { opacity:0.68; }
   #mcskin-app .sk:not(.act):hover { opacity:0.82; }
   #mcskin-app .sk.sk-enter { opacity:0 !important; }
