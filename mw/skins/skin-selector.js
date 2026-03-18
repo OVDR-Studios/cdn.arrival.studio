@@ -174,8 +174,6 @@
       setTimeout(()=>{navCooldown=false;},120);
     },185);
   }
-    },185);
-  }
 
   function moveSK(d){
     const pk=D.skinPacks[pI];
