@@ -154,6 +154,7 @@
   #mcskin-app .sk.act { z-index:2; position:relative; }
   #mcskin-app .sk:not(.act) { opacity:0.68; }
   #mcskin-app .sk:not(.act):hover { opacity:0.82; }
+  #mcskin-app .sk.sk-enter { opacity:0 !important; }
   #mcskin-app .sk .si-err {
     display:flex; align-items:center; justify-content:center;
     background:rgba(60,60,60,0.35);
