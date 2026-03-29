@@ -1,0 +1,23 @@
+# Global Announcements for Management Wanted
+# Lines starting with # are comments and will be ignored
+# Use CONDITION: to specify when announcements should show
+# Available variables: {MOD_VERSION}, {PLAYER}, {DATE}, {TIME}, etc.
+# MOD VERSION is determined in CustomMainMenuScreen.java so if I forget to change it then oops -Chris
+
+CONDITION: {MOD_VERSION} = 1.4
+# WE ARE ADDING THE BATTLEPASS TO MW.
+# STAY TUNED.
+
+# CONDITION: {MONTH} = 12 (doesnt work rn)
+# Happy Holidays from the OVDR Studios team!
+# Thank you for playing Management Wanted this year.
+
+# CONDITION: {TIME_OF_DAY} = Evening
+# Good evening, {PLAYER}!
+# Don't forget to take breaks while playing.
+
+Make sure to buy the $5.99 DLC!
+
+# Announcement without condition (always shows even with other announcements)
+# Check out our Discord at https://discord.gg/ovdr for updates and community discussion!
+# - Management
