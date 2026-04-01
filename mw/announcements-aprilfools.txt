@@ -16,7 +16,7 @@ CONDITION: {MOD_VERSION} = 1.4
 # Good evening, {PLAYER}!
 # Don't forget to take breaks while playing.
 
-Make sure to buy the $5.99 DLC!
+There's no real DLC.. That's against Mojang's EULA! Hope everyone's enjoying the Faz-Pay-As-You-Place™ system! 1 Fazcoin in the Inventory for every block placed.
 
 # Announcement without condition (always shows even with other announcements)
 # Check out our Discord at https://discord.gg/ovdr for updates and community discussion!
