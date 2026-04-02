@@ -1,14 +1,15 @@
 {
   "homepage": "https://fnafmw.com/ea/downloads",
   "1.20.1": {
+    "2.2": "Removes April Fools Faz-Coin System + Fixes Bugs!",
     "2.1": "Fixes important bugs!",
     "1.0.2": "Fixes important bugs!",
     "1.0.1": "Fixes important bugs!",
     "1.0.0": "Release verison"
   },
   "promos": {
-    "1.20.1-latest": "2.1",
-    "1.20.1-recommended": "2.1"
+    "1.20.1-latest": "2.2",
+    "1.20.1-recommended": "2.2"
   }
 }
 
