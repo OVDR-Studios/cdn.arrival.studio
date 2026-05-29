@@ -1,4 +1,4 @@
-# Management Wanted Splash Texts - Updated: 6/22/25
+# FNAF: Management Wanted Online Splash Texts
 # {PLAYER} - Player's username
 # {PLAYER_UUID} - Player's UUID
 # {DATE}, {DATE_EU}, {DATE_ISO} - Various date formats
