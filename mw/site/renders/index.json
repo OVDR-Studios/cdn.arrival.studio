@@ -115,7 +115,7 @@
   {"name":"UCN Fredbear","file":"ucnfredbear.png"},
 
   {"name":"Cake Bear","file":"cakebearrender.png"},
-  
+
   {"name":"BaG Bonnie","file":"bagbonnierender.png"},
   {"name":"BaG Chica","file":"bagchicarender.png"},
   {"name":"BaG Freddy","file":"bagfreddyrender.png"},
@@ -136,7 +136,7 @@
   {"name":"Frickbear's Jeremy","file":"JeremyFrickbear.png"},
   {"name":"Frickbear's Lolbit","file":"lolbitrenderfrick.png"},
   {"name":"Frickbear's Vanessa","file":"VanessaFrickbear.png"},
-  {"name":"Frickbear's Vannabelle","file":"vannabellesFrickbear.png"}
+  {"name":"Frickbear's Vannabelle","file":"vannabellesFrickbear.png"},
 
   {"name":"Candy","file":"candyrender.png"},
   {"name":"Old Candy","file":"oldcandyrender.png"},
@@ -150,6 +150,8 @@
   {"name":"FNAC Vinnie","file":"fnacvinnierender.png"},
 
   {"name":"Pop Goes","file":"popgoesrender.png"},
+
+  {"name":"Hoax Purple Guy","file":"hoaxpurpleguyrender.png"},
 
   {"name":"Talkshow Bonnie","file":"talkshowbonnieRender.png"},
   {"name":"Talkshow Chica","file":"talkshowchicaRender.png"},
@@ -172,5 +174,4 @@
   {"name":"Retro Sparky","file":"RetroSparkyRender.png"},
   {"name":"Withered Sparky","file":"WitheredSparkyRender.png"},
   {"name":"Broken Sparky","file":"BrokenSparkyrender.png"},
-  {"name":"Hoax Purple Guy","file":"hoaxpurpleguyrender.png"},
 ]
