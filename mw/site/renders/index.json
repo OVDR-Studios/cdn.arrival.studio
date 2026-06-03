@@ -109,18 +109,19 @@
   {"name":"Trash Chica","file":"trashchicarender.png"},
   {"name":"Trash Foxy","file":"trashfoxyrender.png"},
   {"name":"Trash Freddy","file":"trashfreddyrender.png"},
-  {"name":"Bag Bonnie","file":"bagbonnierender.png"},
-  {"name":"Bag Chica","file":"bagchicarender.png"},
-  {"name":"Bag Freddy","file":"bagfreddyrender.png"},
-  {"name":"Bag Endo","file":"bagendorender.png"},
-  {"name":"Bag Rainbow","file":"bagrainbowrender.png"},
-  {"name":"Bagatha","file":"bagatharender.png"},
   {"name":"Blue Mediocre","file":"bluemediocrerender.png"},
   {"name":"Endo Plush","file":"endoplushrender.png"},
 
   {"name":"UCN Fredbear","file":"ucnfredbear.png"},
 
   {"name":"Cake Bear","file":"cakebearrender.png"},
+  
+  {"name":"BaG Bonnie","file":"bagbonnierender.png"},
+  {"name":"BaG Chica","file":"bagchicarender.png"},
+  {"name":"BaG Freddy","file":"bagfreddyrender.png"},
+  {"name":"BaG Endo","file":"bagendorender.png"},
+  {"name":"BaG Rainbow","file":"bagrainbowrender.png"},
+  {"name":"Bagatha","file":"bagatharender.png"},
 
   {"name":"JR's BB","file":"JRsBBrender.png"},
   {"name":"JR's Bonnie","file":"jrsbonnierender.png"},
@@ -128,6 +129,14 @@
   {"name":"JR's Foxy","file":"jrsfoxyrender.png"},
   {"name":"JR's Freddy","file":"jrsfreddyrender.png"},
   {"name":"JR's Puppet","file":"jrspuppetrender.png"},
+  
+  {"name":"Frickbear's Fritz","file":"frickbeafritz.png"},
+  {"name":"Frickbear's Mike Sr.","file":"frickbeamikesr.png"},
+  {"name":"Frickbear's Micah","file":"frickmicah.png"},
+  {"name":"Frickbear's Jeremy","file":"JeremyFrickbear.png"},
+  {"name":"Frickbear's Lolbit","file":"lolbitrenderfrick.png"},
+  {"name":"Frickbear's Vanessa","file":"VanessaFrickbear.png"},
+  {"name":"Frickbear's Vannabelle","file":"vannabellesFrickbear.png"}
 
   {"name":"Candy","file":"candyrender.png"},
   {"name":"Old Candy","file":"oldcandyrender.png"},
@@ -164,12 +173,4 @@
   {"name":"Withered Sparky","file":"WitheredSparkyRender.png"},
   {"name":"Broken Sparky","file":"BrokenSparkyrender.png"},
   {"name":"Hoax Purple Guy","file":"hoaxpurpleguyrender.png"},
-
-  {"name":"Frickbear's Fritz","file":"frickbeafritz.png"},
-  {"name":"Frickbear's Mike Sr.","file":"frickbeamikesr.png"},
-  {"name":"Frickbear's Micah","file":"frickmicah.png"},
-  {"name":"Frickbear's Jeremy","file":"JeremyFrickbear.png"},
-  {"name":"Frickbear's Lolbit","file":"lolbitrenderfrick.png"},
-  {"name":"Frickbear's Vanessa","file":"VanessaFrickbear.png"},
-  {"name":"Frickbear's Vannabelle","file":"vannabellesFrickbear.png"}
 ]
