@@ -128,7 +128,7 @@
   {"name":"Old Candy","file":"oldcandyrender.png"},
   {"name":"Cat","file":"catrender.png"},
   {"name":"Rat","file":"ratrender.png"},
-  {"name":"FNAC Vinnie","file":"fnacvinnierender.png"},
+  {"name":"Vinnie","file":"fnacvinnierender.png"},
   {"name":"PopGoes","file":"popgoesrender.png"},
   {"name":"Ignited Freddy","file":"ignitedfreddy2render.png"},
   {"name":"Buddy","file":"buddyrender.png"},
@@ -148,7 +148,7 @@
   {"name":"BaG Endo","file":"bagendorender.png"},
   {"name":"Bagatha","file":"bagatharender.png"},
   {"name":"Rodney","file":"rodneyrender.png"},
-  {"name":"Frickbear's Lolbit","file":"lolbitrenderfrick.png"},
+  {"name":"Lolbit","file":"lolbitrenderfrick.png"},
   
   {"name":"Talkshow Freddy","file":"talkshowfreddyrender.png"},
   {"name":"Talkshow Bonnie","file":"talkshowbonnieRender.png"},
