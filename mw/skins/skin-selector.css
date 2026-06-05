@@ -163,6 +163,11 @@
     font-family:inherit;
   }
 
+  #mcskin-app .sk.sk-stagger {
+    opacity: 0 !important;
+    pointer-events: none;
+  }
+
   #mcskin-sinfo {
     background:#c6c6c6;
     border-top:2px solid #686868; border-right:2px solid #ffffff;
