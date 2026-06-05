@@ -42,7 +42,7 @@
     }
     renderBtns();
     // Phase 2: wait for the visible render images before hiding the loader
-    $('mcskin-ldmsg').textContent='Loading renders';
+    $('mcskin-ldmsg').textContent='Loading Renders';
     await selPack(0);
     $('mcskin-ld').classList.add('done');
   }
