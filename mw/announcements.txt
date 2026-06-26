@@ -4,7 +4,7 @@
 # Available variables: {MOD_VERSION}, {PLAYER}, {DATE}, {TIME}, etc.
 # MOD VERSION is determined in CustomMainMenuScreen.java so if I forget to change it then oops -Chris
 
-CONDITION: {MOD_VERSION} = 1.4
+# CONDITION: {MOD_VERSION} = 1.4
 # WE ARE ADDING THE BATTLEPASS TO MW.
 # STAY TUNED.
 
