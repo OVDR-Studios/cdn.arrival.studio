@@ -1,6 +1,7 @@
 {
   "homepage": "https://fnafmw.com/ea/downloads",
   "1.20.1": {
+    "2.6": "Fixes critical issue of vanilla leaves and tools being broken",
     "2.5": "Fixes BaG blocks, old April Fools text, and improved mod optimization",
     "2.4": "Re-adds Modular & Big Door Blocks, fixes tons of bugs!",
     "2.3": "Optimizes the mod and fixes bugs!",
@@ -11,8 +12,8 @@
     "1.0.0": "Release verison"
   },
   "promos": {
-    "1.20.1-latest": "2.4",
-    "1.20.1-recommended": "2.4"
+    "1.20.1-latest": "2.6",
+    "1.20.1-recommended": "2.6"
   }
 }
 
