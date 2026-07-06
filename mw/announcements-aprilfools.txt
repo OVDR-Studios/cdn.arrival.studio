@@ -16,8 +16,8 @@
 # Good evening, {PLAYER}!
 # Don't forget to take breaks while playing.
 
-NEW PATCH: 2.5 out now!
-Optimizes mod further and fixes BaG blocks!
+NEW PATCH: 2.6 out now!
+Fixes vanilla tools & leaves, optimizes mod further and fixes BaG blocks!
 
 # Announcement without condition (always shows even with other announcements)
 # Check out our Discord at https://discord.gg/ovdr for updates and community discussion!
