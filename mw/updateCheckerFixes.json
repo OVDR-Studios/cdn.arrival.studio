@@ -1,12 +1,12 @@
 {
   "homepage": "https://fnafmw.com/fixes",
   "1.20.1": {
-    "1.0.2": "Fixed crash & Older MW not being useable",
+    "1.0.2": "Fixed crash, older MW not being useable, and structure modular blocks",
     "1.0.1": "Stagelight Link Fix + P&S Door Fix",
   },
   "promos": {
-    "1.20.1-latest": "1.0.1",
-    "1.20.1-recommended": "1.0.1"
+    "1.20.1-latest": "1.0.2",
+    "1.20.1-recommended": "1.0.2"
   }
 }
 
