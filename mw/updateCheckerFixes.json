@@ -1,12 +1,13 @@
 {
   "homepage": "https://fnafmw.com/fixes",
   "1.20.1": {
+    "1.0.3": "Fixed many 0.3.3 bugs (molten freddy dupe, big doors blocks staying on remove, etc)",
     "1.0.2": "Fixed crash, older MW not being useable, and structure modular blocks",
     "1.0.1": "Stagelight Link Fix + P&S Door Fix",
   },
   "promos": {
-    "1.20.1-latest": "1.0.2",
-    "1.20.1-recommended": "1.0.2"
+    "1.20.1-latest": "1.0.3",
+    "1.20.1-recommended": "1.0.3"
   }
 }
 
