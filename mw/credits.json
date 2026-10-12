@@ -1,0 +1,167 @@
+{
+  "credits": [
+    {
+      "section": "Founder & Director",
+      "members": ["OVDR"]
+    },
+    {
+      "section": "Programming",
+      "members": ["ChrisArrived", "Ethyl", "EdmunnTB", "ZeusIGN", "Yirmiri"]
+    },
+    {
+      "section": "Modeling & Texturing",
+      "members": ["OVDR", "AdamantiumDragon", "Boris", "JD Bryant", "GeodeTheCRT", "LewisLikesToast"]
+    },
+    {
+      "section": "Animating",
+      "members": ["StarzG", "Matawelon", "Shareish", "GlitchyTrashCan"]
+    },
+    {
+      "section": "Writing",
+      "members": ["OVDR", "The C.N.E.", "Chappy Bunny", "PureJaffy", "JD Bryant", "JustJBrick"]
+    },
+    {
+      "section": "Voice Cast",
+      "members": [
+        { "character": "Helpy", "actor": "Estrogen_Storm" },
+        { "character": "Phone Guy", "actor": "Fever852" },
+        { "character": "Tutorial Unit", "actor": "WizardryVA" },
+        { "character": "Freddy Fazbear", "actor": "Strictly" },
+        { "character": "Bonnie the Bunny", "actor": null },
+        { "character": "Chica the Chicken", "actor": null },
+        { "character": "Foxy the Pirate Fox", "actor": "Bilai Morri" },
+        { "character": "Toy Freddy", "actor": "Darren Roebuck" },
+        { "character": "Toy Bonnie", "actor": "Kash Velasquez" },
+        { "character": "Toy Chica", "actor": "BlurryUmbrellas" },
+        { "character": "Toy Foxy", "actor": "TheTVBunny" },
+        { "character": "Mangle", "actor": "TheTVBunny" },
+        { "character": "Puppet", "actor": "Nora Seb" },
+        { "character": "Withered Freddy", "actor": "ExpresslyVOs" },
+        { "character": "Withered Bonnie", "actor": "Hans Yunda" },
+        { "character": "Withered Chica", "actor": null },
+        { "character": "Withered Foxy", "actor": "Robin Nelson" },
+        { "character": "Springtrap", "actor": "Tyler Zimmick" },
+        { "character": "Nightmare Freddy", "actor": "BugDroidCell" },
+        { "character": "Nightmare Bonnie", "actor": "AnOddArtist" },
+        { "character": "Nightmare Chica", "actor": null },
+        { "character": "Plushtrap", "actor": "AnOddArtist" },
+        { "character": "Nightmare Fredbear", "actor": "Rought Hand Man" },
+        { "character": "Nightmare", "actor": "MothMommas" },
+        { "character": "Jack-O-Bonnie", "actor": "AnOddArtist" },
+        { "character": "Jack-O-Chica", "actor": null },
+        { "character": "Nightmare BB", "actor": "MothMommas" },
+        { "character": "Nightmarionne", "actor": "orvengore" },
+        { "character": "Circus Baby", "actor": "ixsapphire" },
+        { "character": "Bidybab", "actor": "FrogFib" },
+        { "character": "Ballora", "actor": "PAPERJAMAZ" },
+        { "character": "Funtime Freddy", "actor": "Corey LeVier" },
+        { "character": "Bon Bon", "actor": "BlurryUmbrellas" },
+        { "character": "Bonnet", "actor": "MayDoesAThing" },
+        { "character": "Funtime Foxy", "actor": "JustJBrick" },
+        { "character": "Elizabeth Afton", "actor": "FrogFib" },
+        { "character": "Mr. Hugs", "actor": "Murry" },
+        { "character": "Happy Frog", "actor": "BlurryUmbrellas" },
+        { "character": "Mr. Hippo", "actor": "MelodyVOA" },
+        { "character": "Pigpatch", "actor": "Corey LeVier" },
+        { "character": "Nedd Bear", "actor": "Monolith" },
+        { "character": "Orville Elephant", "actor": "Estrogen_Storm" },
+        { "character": "Rockstar Freddy", "actor": "ZarchPlaysGames" },
+        { "character": "Rockstar Bonnie", "actor": "TheGooseVA" },
+        { "character": "Rockstar Chica", "actor": "CatSnacks" },
+        { "character": "Rockstar Foxy", "actor": "Ray O'Hare" },
+        { "character": "Music Man", "actor": "Fever852" },
+        { "character": "Funtime Chica", "actor": "ahi＿bit" },
+        { "character": "Lefty", "actor": "BlurryUmbrellas" },
+        { "character": "Molten Freddy", "actor": "Corey LeVier" },
+        { "character": "Scrap Baby", "actor": "ixsapphire" },
+        { "character": "Afton", "actor": "Tyler Zimmick" },
+        { "character": "Vanny", "actor": null },
+        { "character": "The Mimic", "actor": "WizardryVA" },
+        { "character": "The Creature", "actor": "ExpresslyVOs" },
+        { "character": "Lally", "actor": "The C.N.E." },
+        { "character": "The Animatronic", "actor": "Tyler Zimmick" },
+        { "character": "Buddy", "actor": "Wrathstetic" },
+        { "character": "Killtimber", "actor": "AnOddArtist" },
+        { "character": "Summercrab", "actor": null },
+        { "character": "Seabill.exe", "actor": "AnOddArtist" },
+        { "character": "Rodney Redbird", "actor": "Nukelear" },
+        { "character": "Salvage", "actor": "G-Zone" },
+        { "character": "Dirtbag", "actor": "Fever852" },
+        { "character": "Percy Poodle", "actor": "Sunset64" },
+        { "character": "Charlie Cat", "actor": "RustyRed" },
+        { "character": "Mother Moose", "actor": "TheTVBunny" },
+        { "character": "Farmer Felix", "actor": "RustyRed" },
+        { "character": "Rowen Rat", "actor": "RustyRed" },
+        { "character": "Playful Poodles", "actor": "TheTVBunny" },
+        { "character": "Heilos", "actor": "Sunset64" },
+        { "character": "Sunny Sheep", "actor": null },
+        { "character": "Pal Percy", "actor": "Artydoesstuff" },
+        { "character": "Tama-Terrors", "actor": "Sunset64" },
+        { "character": "Poodle Pals", "actor": "Sunset64" },
+        { "character": "Truman", "actor": "RustyRed" },
+        { "character": "Polly Possum", "actor": "Sunset64" },
+        { "character": "Fright", "actor": "Burb" },
+        { "character": "Captain Spike", "actor": "SkellyTen" },
+        { "character": "Luna", "actor": "Ellie" },
+        { "character": "Sandy Sheriff", "actor": "CamDaMan" },
+        { "character": "Toon Springtrap", "actor": "Zach Fuller" },
+        { "character": "Stitchhare", "actor": "gubblegum_" },
+        { "character": "Frickbear's Lolbit", "actor": "TheTVBunny" },
+        { "character": "Gianni", "actor": "Gianni Matragrano" }
+      ]
+    },
+    {
+      "section": "Soundtrack Musicians",
+      "members": ["ThatRedHare", "Ethi", "Etanh", "ItzKeoni", "Way2Kool", "Devin Music"]
+    },
+    {
+      "section": "Sound Design",
+      "members": ["TheTVBunny", "Doger", "Vicely"]
+    },
+    {
+      "section": "Concept Art",
+      "members": ["OVDR", "Matawelon", "Birdie Candles", "Akerne", "ArcH1ve"]
+    },
+    {
+      "section": "Brand Social Media",
+      "members": ["ChrisArrived"]
+    },
+    {
+      "section": "Additional Assistance",
+      "members": [
+        { "name": "ChrisArrived", "role": "Community Manager" },
+        { "name": "GeodeTheCRT", "role": "Community Manager" },
+        { "name": "ThatSaladGal", "role": "2D Art" },
+        { "name": "Bendu", "role": "3D Art" },
+        { "name": "[mims the second]", "role": "3D Art" },
+        { "name": "SirPancakes", "role": "3D Art" },
+        { "name": "ItsSmudgy", "role": "3D Art" },
+        { "name": "NeedyNerd", "role": "3D Art" },
+        { "name": "DEGIncarnate", "role": "3D Art" },
+        { "name": "BoniEggu", "role": "Animation" },
+        { "name": "Waup", "role": "Animation" },
+        { "name": "WB", "role": "Animation" },
+        { "name": "Anim", "role": "Animation" },
+        { "name": "TheDanielArtist", "role": "Animation" },
+        { "name": "SomeoneCalledRagnarok", "role": "Animation" },
+        { "name": "TeamLeaf", "role": "Renders" },
+        { "name": "Negatiive3D", "role": "Renders" },
+        { "name": "Dapper Husky", "role": "Music" },
+        { "name": "Robert The Rabbit", "role": "Music" },
+        { "name": "ScaryTvMan", "role": "Sound Design" }
+      ]
+    },
+    {
+      "section": "Special Thanks",
+      "members": [
+        "Aaron Margolin", "DiceGames", "FazieFunBear", "LilJetGames", "Zwei", "Polly",
+        "Battington", "Phantron", "Hew", "Spooky Rick", "Dark Star", "ARDmation",
+        "Dawko", "FusionZGamer", "CuppaTeaExe", "NeeTroo", "Squeaks D'Corgeh", "Gold571",
+        "Rollins Pierce", "Cokos Beanz", "MrFreddy64", "Dot-e", "Dorbledoo", "Kane Carter",
+        "Emil Macko", "Nikson", "Teajai", "MisterMacabre", "rynfox", "Gus",
+        "Garrett Mckay", "ItzSoara", "Marco Antonio", "Emir Bready", "Krazy Ant", "NolandSpring",
+        "Bloom"
+      ]
+    }
+  ]
+}
