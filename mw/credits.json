@@ -18,7 +18,7 @@
     },
     {
       "section": "Writing",
-      "members": ["OVDR", "The C.N.E.", "Chappy Bunny", "PureJaffy", "JD Bryant", "JustJBrick"]
+      "members": ["OVDR", "PureJaffy", "The C.N.E.", "JD Bryant"]
     },
     {
       "section": "Voice Cast",
@@ -75,8 +75,10 @@
         { "character": "Molten Freddy", "actor": "Corey LeVier" },
         { "character": "Scrap Baby", "actor": "ixsapphire" },
         { "character": "Afton", "actor": "Tyler Zimmick" },
-        { "character": "Vanny", "actor": null },
-        { "character": "The Mimic", "actor": "WizardryVA" },
+        { "character": "Vanny", "actor": "JJ40004" },
+        { "character": "Edwin Murray", "actor": "RedTv53" },
+        { "character": "Fiona Murray", "actor": null },
+        { "character": "Dispatch", "actor": "WizardryVA" },
         { "character": "The Creature", "actor": "ExpresslyVOs" },
         { "character": "Lally", "actor": "The C.N.E." },
         { "character": "The Animatronic", "actor": "Tyler Zimmick" },
@@ -105,6 +107,7 @@
         { "character": "Luna", "actor": "Ellie" },
         { "character": "Sandy Sheriff", "actor": "CamDaMan" },
         { "character": "Toon Springtrap", "actor": "Zach Fuller" },
+        { "character": "Twilight", "actor": "andifaimos" },
         { "character": "Stitchhare", "actor": "gubblegum_" },
         { "character": "Frickbear's Lolbit", "actor": "TheTVBunny" },
         { "character": "Gianni", "actor": "Gianni Matragrano" }
@@ -116,7 +119,7 @@
     },
     {
       "section": "Sound Design",
-      "members": ["TheTVBunny", "Doger", "Vicely"]
+      "members": ["TheTVBunny", "Doger", "Vicely", "Etanh"]
     },
     {
       "section": "Concept Art",
@@ -144,6 +147,8 @@
         { "name": "Anim", "role": "Animation" },
         { "name": "TheDanielArtist", "role": "Animation" },
         { "name": "SomeoneCalledRagnarok", "role": "Animation" },
+        { "name": "Chappy Bunny", "role": "Writing" },
+        { "name": "JustJBrick", "role": "Writing" },
         { "name": "TeamLeaf", "role": "Renders" },
         { "name": "Negatiive3D", "role": "Renders" },
         { "name": "Dapper Husky", "role": "Music" },
@@ -154,12 +159,42 @@
     {
       "section": "Special Thanks",
       "members": [
-        "Aaron Margolin", "DiceGames", "FazieFunBear", "LilJetGames", "Zwei", "Polly",
-        "Battington", "Phantron", "Hew", "Spooky Rick", "Dark Star", "ARDmation",
-        "Dawko", "FusionZGamer", "CuppaTeaExe", "NeeTroo", "Squeaks D'Corgeh", "Gold571",
-        "Rollins Pierce", "Cokos Beanz", "MrFreddy64", "Dot-e", "Dorbledoo", "Kane Carter",
-        "Emil Macko", "Nikson", "Teajai", "MisterMacabre", "rynfox", "Gus",
-        "Garrett Mckay", "ItzSoara", "Marco Antonio", "Emir Bready", "Krazy Ant", "NolandSpring",
+        "Aaron Margolin",
+        "DiceGames",
+        "FazieFunBear",
+        "LilJetGames",
+        "Zwei",
+        "Polly",
+        "Battington",
+        "Phantron",
+        "Hew",
+        "Spooky Rick",
+        "Dark Star",
+        "ARDmation",
+        "Dawko",
+        "FusionZGamer",
+        "CuppaTeaExe",
+        "NeeTroo",
+        "Squeaks D'Corgeh",
+        "Gold571",
+        "Rollins Pierce",
+        "Cokos Beanz",
+        "MrFreddy64",
+        "Dot-e",
+        "Dorbledoo",
+        "Kane Carter",
+        "Emil Macko",
+        "Nikson",
+        "Teajai",
+        "MisterMacabre",
+        "rynfox",
+        "Gus",
+        "Garrett Mckay",
+        "ItzSoara",
+        "Marco Antonio",
+        "Emir Bready",
+        "Krazy Ant",
+        "NolandSpring",
         "Bloom"
       ]
     }
