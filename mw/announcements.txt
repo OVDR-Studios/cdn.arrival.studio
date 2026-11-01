@@ -16,8 +16,7 @@
 # Good evening, {PLAYER}!
 # Don't forget to take breaks while playing.
 
-Welcome BMC members! Remember to report any bugs you find (but read the guidelines before doing so!)
-DON'T LEAK OR WE'LL PUBLICALLY EXECUTE YOU.
+1.0.0 is finally out. Report any bugs in our Discord! See the status of existing bugs at bugs.fnafmw.com
 
 # Announcement without condition (always shows even with other announcements)
 # Check out our Discord at https://discord.gg/ovdr for updates and community discussion!
