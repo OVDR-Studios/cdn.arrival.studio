@@ -442,6 +442,10 @@
       "section": "Translators",
       "members": [
         {
+          "role": "Arabic",
+          "name": "Zahraa"
+        },
+        {
           "role": "Czech",
           "name": "BrutusVitkus"
         },
