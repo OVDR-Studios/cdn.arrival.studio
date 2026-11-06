@@ -441,66 +441,21 @@
     {
       "section": "Translators",
       "members": [
-        {
-          "name": "ZsomFright",
-          "role": "Hungarian"
-        },
-        {
-          "name": "Maximus4257",
-          "role": "German"
-        },
-        {
-          "name": "CommonShirt",
-          "role": "Flemish"
-        },
-        {
-          "name": "ErWoMa",
-          "role": "Russian"
-        },
-        {
-          "name": "Gueshiryu",
-          "role": "Russian"
-        },
-        {
-          "name": "BrutusVitkus",
-          "role": "Czech"
-        },
-        {
-          "name": "AromaticHydrocarbon",
-          "role": "Simplified Chinese"
-        },
-        {
-          "name": "Obscura ;)",
-          "role": "Slovenian"
-        },
-        {
-          "name": "Neolux7z",
-          "role": "Spanish (Spain)"
-        },
-        {
-          "name": "Rakunbaba",
-          "role": "Turkish"
-        },
-        {
-          "name": "Ukranian Fazbear (Dan)",
-          "role": "Ukrainian"
-        },
-        {
-          "name": "Dontermix",
-          "role": "Ukrainian"
-        },
-        {
-          "name": "Hrzul",
-          "role": "Slovenian"
-        },
-        {
-          "name": "HK",
-          "role": "Flemish"
-        },
-        {
-          "name": "andrystein03",
-          "role": "Italian"
-        }
+        "Czech - BrutusVitkus",
+        "Flemish - CommonShirt",
+        "Flemish - HK",
+        "German - Maximus4257",
+        "Hungarian - ZsomFright",
+        "Italian - andrystein03",
+        "Russian - ErWoMa",
+        "Russian - Gueshiryu",
+        "Simplified Chinese - AromaticHydrocarbon",
+        "Slovenian - Hrzul",
+        "Slovenian - Obscura ;)",
+        "Spanish (Spain) - Neolux7z",
+        "Turkish - Rakunbaba",
+        "Ukrainian - Dontermix",
+        "Ukrainian - Ukranian Fazbear (Dan)"
       ]
     },
     {
