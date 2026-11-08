@@ -18,7 +18,7 @@
     {
       "name": "Manager Skin",
       "id": "manager",
-      "description": "",
+      "description": "As seen in the FNAF: Management Wanted Alpha Release Trailer",
       "image": "cover.png",
       "skins": [
         { "name": "Manager", "render": "Manager_render.png",   "file": "Manager.png",    "desc": "" }
