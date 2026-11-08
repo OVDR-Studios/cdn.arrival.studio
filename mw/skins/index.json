@@ -13,6 +13,14 @@
         { "name": "Fritz Smith",  "render": "Fritz_render.png",   "file": "Fritz.png",  "desc": "I forgot my name." },
         { "name": "Michael Afton",  "render": "Michael_render.png",   "file": "Michael.png",  "desc": "If you play with fire... you're going to get burned." },
         { "name": "Vannabelle Dewlap",  "render": "Vannabelle_render.png",   "file": "Vannabelle.png",  "desc": "I guess you could call me a collector!" }
+      ],
+      {
+      "name": "Manager Skin",
+      "id": "manager",
+      "description": "",
+      "image": "cover.png",
+      "skins": [
+        { "name": "Manager", "render": "Manager_render.png",   "file": "Manager.png",    "desc": "" }
       ]
     }
   ]
