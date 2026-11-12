@@ -77,6 +77,14 @@
           "actor": "Bilai Morri"
         },
         {
+          "character": "Monty",
+          "actor": "CamDaMan"
+        },
+        {
+          "character": "Roxy",
+          "actor": "TheTVBunny"
+        },
+        {
           "character": "Toy Freddy",
           "actor": "Darren Roebuck"
         },
@@ -110,7 +118,7 @@
         },
         {
           "character": "Withered Chica",
-          "actor": null
+          "actor": "CatSnacks"
         },
         {
           "character": "Withered Foxy",
@@ -142,7 +150,7 @@
         },
         {
           "character": "Nightmare",
-          "actor": "MothMommas"
+          "actor": "Bilai Morri"
         },
         {
           "character": "Jack-O-Bonnie",
@@ -210,7 +218,7 @@
         },
         {
           "character": "Nedd Bear",
-          "actor": "Monolith"
+          "actor": null
         },
         {
           "character": "Orville Elephant",
