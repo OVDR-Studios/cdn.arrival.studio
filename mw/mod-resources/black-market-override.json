@@ -6,7 +6,7 @@
         "animatronics": [                                   
           { "id": "golden_freddy", "price": 1 },            
           "random",                                         
-          "springtrap"                                      
+          { "id": "springtrap", "price": 5 },                                      
         ]                                                   
       },                                                    
       {                                                     
