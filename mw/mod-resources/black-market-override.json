@@ -4,13 +4,13 @@
         "start": "2026-11-13",                              
         "days": 5,                                          
         "animatronics": [                                   
-          "random",           
-          "random",                                         
-          "random",                                   
+          { "id": "golden_freddy", "price": 1 },            
+          { "id": "golden_freddy", "price": 1 },                                         
+          { "id": "golden_freddy", "price": 1 },                                
         ]                                                   
       },                                                    
       {                                                     
-        "day": "2026-11-18",                                
+        "day": "2026-11-25",                                
         "animatronics": ["nightmarionne", "ennard", "afton"]
       }                                                     
     ]                                                       
