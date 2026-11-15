@@ -2,7 +2,7 @@
     "overrides": [                                          
       {                                                     
         "start": "2026-11-13",                              
-        "days": 3,                                          
+        "days": 5,                                          
         "animatronics": [                                   
           { "id": "golden_freddy", "price": 1 },            
           "random",                                         
