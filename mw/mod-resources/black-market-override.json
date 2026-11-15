@@ -1,0 +1,17 @@
+  {                                                         
+    "overrides": [                                          
+      {                                                     
+        "start": "2026-11-14",                              
+        "days": 3,                                          
+        "animatronics": [                                   
+          { "id": "golden_freddy", "price": 1 },            
+          "random",                                         
+          "springtrap"                                      
+        ]                                                   
+      },                                                    
+      {                                                     
+        "day": "2026-11-18",                                
+        "animatronics": ["nightmarionne", "ennard", "afton"]
+      }                                                     
+    ]                                                       
+  }  
