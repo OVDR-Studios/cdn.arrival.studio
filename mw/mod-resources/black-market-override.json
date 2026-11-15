@@ -8,10 +8,6 @@
           { "id": "golden_freddy", "price": 1 },                                         
           { "id": "golden_freddy", "price": 1 },                                
         ]                                                   
-      },                                                    
-      {                                                     
-        "day": "2026-11-25",                                
-        "animatronics": ["nightmarionne", "ennard", "afton"]
-      }                                                     
+      }                                                 
     ]                                                       
   }  
