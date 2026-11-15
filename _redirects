@@ -3,3 +3,9 @@
 /mw/mod-resources https://github.com/OVDR-Studios/cdn.arrival.studio/blob/main/mw/readme.md 302
 /mw/mod-resources/ https://github.com/OVDR-Studios/cdn.arrival.studio/blob/main/mw/readme.md 302
 /q23aaUntitled-2.png https://cdn.arrival.studio/mw/mod-resources/tfh.png 302
+
+/mw/splash-texts.txt /mw/mod-resources/splash-texts.txt 200
+/mw/announcements.txt /mw/mod-resources/announcements.txt 200
+/mw/credits.json /mw/mod-resources/credits.json 200
+/mw/members /mw/mod-resources/members 200
+/mw/members.html /mw/mod-resources/members 200
