@@ -1,8 +1,8 @@
   {                                                         
     "overrides": [                                          
       {                                                     
-        "start": "2026-11-13",                              
-        "days": 5,                                          
+        "start": "2026-11-15",                              
+        "days": 1,                                          
         "animatronics": [                                   
           "random",      
           "random",                                   
