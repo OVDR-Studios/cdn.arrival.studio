@@ -4,9 +4,9 @@
         "start": "2026-11-13",                              
         "days": 5,                                          
         "animatronics": [                                   
-          "random",    
-          "random",                                     
-          "random",                      
+          { "id": "lally", "price": 9999999 },      
+          { "id": "lally", "price": 9999999 },                                   
+          { "id": "phantom_freddy", "price": 1 },                 
         ]                                                   
       }                                                 
     ]                                                       
