@@ -26,7 +26,7 @@ Up to 3 slots. Each slot is one of:
 | `day` | `"2026-12-25"` | That whole day |
 | `start` | `"2026-12-25"` | From the start of that day |
 | `start` | `"2026-12-25T18:00"` | From 18:00 in the override's timezone |
-| `start` | `"2026-12-25T18:00:00Z"` | Exact UTC moment (offsets like `+02:00` work too) |
+| `start` | `"2026-12-25T18:00:00Z"` | Exact EST moment (offsets like `+02:00` work too) |
 | `end` | same formats as `start` | A plain date means "through the end of that day" |
 | `days` / `hours` / `minutes` | `1.5` | How long it lasts after `day`/`start`. They add up and decimals are fine. Ignored if `end` is set |
 
@@ -51,7 +51,7 @@ With no `day`, `start` or `end`, the override is active forever (or forever on i
 
 | Field | Example | Meaning |
 |---|---|---|
-| `timezone` | `"America/New_York"` | Timezone for everything above. Defaults to UTC |
+| `timezone` | `"America/New_York"` | Timezone for everything above. Defaults to EST |
 
 Use names from the [tz database list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
