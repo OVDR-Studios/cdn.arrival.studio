@@ -4,9 +4,9 @@
         "start": "2026-11-16",                              
         "end": "2026-11-17T19:00",                                          
         "animatronics": [                                   
-          { "id": "springtrap", "price": 5 },   
-          { "id": "springtrap", "price": 5 },                                 
-          { "id": "springtrap", "price": 5 },                 
+          { "id": "random", "price": 25 },   
+          { "id": "random", "price": 25 },                                
+          { "id": "random", "price": 25 },              
         ]                                                   
       }                                                 
     ]                                                       
