@@ -458,6 +458,10 @@
           "name": "Zahraa"
         },
         {
+          "role": "Chinese (Simplified)",
+          "name": "AromaticHydrocarbon"
+        },
+        {
           "role": "Czech",
           "name": "BrutusVitkus"
         },
@@ -516,10 +520,6 @@
         {
           "role": "Russian",
           "name": "Blitzcringe"
-        },
-        {
-          "role": "Simplified Chinese",
-          "name": "AromaticHydrocarbon"
         },
         {
           "role": "Slovenian",
