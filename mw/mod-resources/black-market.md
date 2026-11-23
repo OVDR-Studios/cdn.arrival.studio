@@ -15,6 +15,7 @@ Up to 3 slots. Each slot is one of:
 | `"lally"` | That animatronic at its normal price |
 | `{ "id": "lally", "price": 500 }` | That animatronic at a custom price |
 | `"random"` | A random pick from the normal roster |
+| `{ "id": "random", "price": 25 }` | A random pick from the normal roster at a custom price |
 
 - Ids without a namespace are fnafmw ids. Animatronics from other mods use `"othermod:thing"`.
 - If you give fewer than 3 slots, the rest are filled randomly.
