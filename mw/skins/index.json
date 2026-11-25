@@ -1,5 +1,5 @@
 {
-  "background": "bg.png",
+  "background": "bg.webp",
   "skinPacks": [
     {
       "name": "Five Nights at Frickbear's 3",
@@ -7,21 +7,21 @@
       "description": "To celebrate Frickbear's 3 release, we've published our nightguard skins we made for our Frickbears collab trailer!",
       "image": "cover.png",
       "skins": [
-        { "name": "Jeremy Fitzgerald", "render": "Jeremy_render.png",   "file": "Jeremy.png",    "desc": "Gosh Jeremy, what's a fella like you doing working at a place like this?" },
-        { "name": "Mike Schmidt",     "render": "Mike_render.png",   "file": "Mike.png",     "desc": "Working at the last place in town that would even think about hiring a blasphemously incompetent neanderthal." },
-        { "name": "Vanessa Shelly",   "render": "Vanessa_render.png",   "file": "Vanessa.png",   "desc": "Guess things have a funny way of working themselves out." },
-        { "name": "Fritz Smith",  "render": "Fritz_render.png",   "file": "Fritz.png",  "desc": "I forgot my name." },
+        { "name": "Jeremy Fitzgerald", "render": "Jeremy_render.webp",   "file": "Jeremy.png",    "desc": "Gosh Jeremy, what's a fella like you doing working at a place like this?" },
+        { "name": "Mike Schmidt",     "render": "Mike_render.webp",   "file": "Mike.png",     "desc": "Working at the last place in town that would even think about hiring a blasphemously incompetent neanderthal." },
+        { "name": "Vanessa Shelly",   "render": "Vanessa_render.webp",   "file": "Vanessa.png",   "desc": "Guess things have a funny way of working themselves out." },
+        { "name": "Fritz Smith",  "render": "Fritz_render.webp",   "file": "Fritz.png",  "desc": "I forgot my name." },
         { "name": "Michael Afton",  "render": "Michael_render.png",   "file": "Michael.png",  "desc": "If you play with fire... you're going to get burned." },
-        { "name": "Vannabelle Dewlap",  "render": "Vannabelle_render.png",   "file": "Vannabelle.png",  "desc": "I guess you could call me a collector!" }
+        { "name": "Vannabelle Dewlap",  "render": "Vannabelle_render.webp",   "file": "Vannabelle.png",  "desc": "I guess you could call me a collector!" }
       ]
     },
     {
       "name": "Manager Skin",
       "id": "manager",
       "description": "",
-      "image": "cover.png",
+      "image": "cover.webp",
       "skins": [
-        { "name": "Manager", "render": "Manager_render.png",   "file": "Manager.png",    "desc": "As seen in the FNAF: Management Wanted Alpha Release Trailer." }
+        { "name": "Manager", "render": "Manager_render.webp",   "file": "Manager.png",    "desc": "As seen in the FNAF: Management Wanted Alpha Release Trailer." }
       ]
     }
   ]
